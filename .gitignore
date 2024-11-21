@@ -1,5 +1,16 @@
 node_modules
+.DS_Store
 dist
 out/
 .tmp/
 *.log
+.output
+*.local
+**/.vitepress/cache
+.cache
+.turbo
+.temp
+.stylelintcache
+
+yarn.lock
+package-lock.json
