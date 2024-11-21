@@ -1,10 +1,14 @@
 <template>
   <button
+    class="v-button"
     :class="[
-      'ui-button',
-      `ui-button--${type}`,
-      `ui-button--${size}`,
-      { 'ui-button--disabled': disabled }
+      type ? `v-button--${type}` : '',
+      size ? `v-button--${size}` : '',
+      {
+        'is-plain': plain,
+        'is-round': round,
+        'is-disabled': disabled
+      }
     ]"
     :disabled="disabled"
     @click="handleClick"
@@ -14,74 +18,89 @@
 </template>
 
 <script setup lang="ts">
-interface Props {
-  type?: 'primary' | 'secondary' | 'text'
-  size?: 'small' | 'medium' | 'large'
-  disabled?: boolean
-}
+import { ButtonProps, ButtonEmits } from './Button.types';
 
-const props = withDefaults(defineProps<Props>(), {
-  type: 'primary',
+defineOptions({
+  name: 'VButton'
+});
+
+const props = withDefaults(defineProps<ButtonProps>(), {
+  type: undefined,
   size: 'medium',
-  disabled: false
-})
+  disabled: false,
+  plain: false,
+  round: false
+});
 
-const emit = defineEmits<{
-  (e: 'click', event: MouseEvent): void
-}>()
+const emit = defineEmits<ButtonEmits>();
 
 const handleClick = (event: MouseEvent) => {
   if (!props.disabled) {
-    emit('click', event)
+    emit('click', event);
   }
-}
+};
 </script>
 
-<style scoped>
-.ui-button {
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-.ui-button--primary {
-  background-color: #1a73e8;
-  color: white;
-}
-
-.ui-button--secondary {
-  background-color: #f1f3f4;
-  color: #1a73e8;
-}
-
-.ui-button--text {
-  background-color: transparent;
-  color: #1a73e8;
-}
-
-.ui-button--small {
-  padding: 6px 12px;
-  font-size: 14px;
-}
-
-.ui-button--medium {
+<style scoped lang="scss">
+.v-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 8px 16px;
-  font-size: 16px;
-}
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  transition: all 0.3s;
 
-.ui-button--large {
-  padding: 12px 24px;
-  font-size: 18px;
-}
+  &--primary {
+    background-color: var(--v-primary-color, #646cff);
+    color: white;
+  }
 
-.ui-button--disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+  &--success {
+    background-color: var(--v-success-color, #67c23a);
+    color: white;
+  }
 
-.ui-button:hover:not(.ui-button--disabled) {
-  opacity: 0.9;
+  &--warning {
+    background-color: var(--v-warning-color, #e6a23c);
+    color: white;
+  }
+
+  &--danger {
+    background-color: var(--v-danger-color, #f56c6c);
+    color: white;
+  }
+
+  &--medium {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  &--small {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  &--large {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  &.is-plain {
+    background-color: transparent;
+    border-color: currentColor;
+  }
+
+  &.is-round {
+    border-radius: 20px;
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 }
-</style> 
+</style>

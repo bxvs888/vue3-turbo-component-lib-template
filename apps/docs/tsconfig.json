@@ -1,11 +1,18 @@
 {
     "extends": "@vue3-lib/typescript-config/vite.json",
-    "include": ["."],
-    "exclude": ["dist", "build", "node_modules"],
+    "include": [
+        "docs/**/*.ts",
+        "docs/**/*.d.ts",
+        "docs/**/*.vue",
+        ".vitepress/**/*.ts",
+        ".vitepress/**/*.vue",
+        "types/**/*.d.ts"
+    ],
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@/*": ["./src/*"]
-        }
+            "@/*": ["docs/*"]
+        },
+        "types": ["vitepress/client", "node"]
     }
-} 
+}

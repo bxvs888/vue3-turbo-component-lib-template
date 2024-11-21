@@ -1,0 +1,61 @@
+.v-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s;
+
+  &--primary {
+    color: white;
+    background-color: var(--v-primary-color, #646cff);
+  }
+
+  &--success {
+    color: white;
+    background-color: var(--v-success-color, #67c23a);
+  }
+
+  &--warning {
+    color: white;
+    background-color: var(--v-warning-color, #e6a23c);
+  }
+
+  &--danger {
+    color: white;
+    background-color: var(--v-danger-color, #f56c6c);
+  }
+
+  &--medium {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  &--small {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  &--large {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+
+  &.is-plain {
+    background-color: transparent;
+    border-color: currentcolor;
+  }
+
+  &.is-round {
+    border-radius: 20px;
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}

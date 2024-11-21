@@ -1,21 +1,25 @@
 {
   "name": "@vue3-lib/utils",
   "version": "0.0.1",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
-  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
-    "dist/**"
+    "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "dev": "rollup -c rollup.config.ts --configPlugin typescript -w",
+    "build": "rm -rf dist && rollup -c rollup.config.ts --configPlugin typescript",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "tsup": "^8.0.2",
+    "@vue3-lib/typescript-config": "workspace:*",
     "typescript": "^5.4.2",
-    "@types/node": "^20.11.24",
-    "@vue3-lib/typescript-config": "workspace:*"
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "rollup": "^4.12.0",
+    "tslib": "^2.6.2"
   }
 }

@@ -1,5 +1,14 @@
+export type ButtonType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | '';
+export type ButtonSize = 'small' | 'medium' | 'large';
+
 export interface ButtonProps {
-    type?: 'primary' | 'secondary' | 'text'
-    size?: 'small' | 'medium' | 'large'
-    disabled?: boolean
-} 
+  type?: ButtonType;
+  size?: ButtonSize;
+  disabled?: boolean;
+  plain?: boolean;
+  round?: boolean;
+}
+
+export interface ButtonEmits {
+  (e: 'click', event: MouseEvent): void;
+}

@@ -1,5 +1,9 @@
 export default {
-  extends: ['stylelint-config-standard', 'stylelint-config-recommended-vue', 'stylelint-config-recess-order'],
+  extends: [
+    'stylelint-config-standard',
+    'stylelint-config-recommended-vue',
+    'stylelint-config-recess-order'
+  ],
   overrides: [
     {
       files: ['**/*.(vue|html)'],
@@ -8,6 +12,8 @@ export default {
   ],
   rules: {
     'selector-class-pattern': null,
-    'no-descending-specificity': null
+    'no-descending-specificity': null,
+    'no-invalid-double-slash-comments': null,
+    'property-no-unknown': [true, { ignoreProperties: ['//'] }]
   }
 };
