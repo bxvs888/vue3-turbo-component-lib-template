@@ -2,57 +2,39 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
   title: 'Vue3 Component Library',
-  description: 'A Vue 3 Component Library with TypeScript',
-  base: '/',
-  outDir: '.vitepress/dist',
+  description: 'A Vue3 Component Library',
   themeConfig: {
     nav: [
-      { text: '指南', link: '/guide/introduction' },
-      { text: '组件', link: '/packages/ui/' },
-      {
-        text: '工具包',
-        items: [
-          { text: 'UI 组件库', link: '/packages/ui/' },
-          { text: '工具函数库', link: '/packages/utils/' },
-          {
-            text: 'TypeScript 配置',
-            link: '/packages/typescript-config/'
-          },
-          { text: 'ESLint 配置', link: '/packages/eslint-config/' }
-        ]
-      }
+      { text: 'Guide', link: '/guide/' },
+      { text: 'Components', link: '/components/' }
     ],
     sidebar: {
       '/guide/': [
         {
-          text: '指南',
+          text: 'Guide',
           items: [
-            { text: '介绍', link: '/guide/introduction' },
-            { text: '主题', link: '/guide/theme' }
+            { text: 'Getting Started', link: '/guide/' },
+            { text: 'Installation', link: '/guide/installation' }
           ]
         }
       ],
-      '/packages/': [
+      '/components/': [
         {
-          text: '组件库',
-          items: [{ text: '组件总览', link: '/packages/ui/' }]
-        },
-        {
-          text: '工具包',
-          items: [
-            { text: '工具函数库', link: '/packages/utils/' },
-            {
-              text: 'TypeScript 配置',
-              link: '/packages/typescript-config/'
-            },
-            {
-              text: 'ESLint 配置',
-              link: '/packages/eslint-config/'
-            }
-          ]
+          text: 'Components',
+          items: [{ text: 'Button', link: '/components/button' }]
         }
       ]
+    }
+  },
+  vite: {
+    ssr: {
+      noExternal: ['@vue3-lib/ui']
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/your-repo' }]
+    resolve: {
+      dedupe: ['vue']
+    },
+    optimizeDeps: {
+      exclude: ['@vue3-lib/ui']
+    }
   }
 });

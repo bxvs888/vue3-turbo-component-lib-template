@@ -1,18 +1,16 @@
 {
-    "extends": "@vue3-lib/typescript-config/vite.json",
-    "include": [
-        "docs/**/*.ts",
-        "docs/**/*.d.ts",
-        "docs/**/*.vue",
-        ".vitepress/**/*.ts",
-        ".vitepress/**/*.vue",
-        "types/**/*.d.ts"
-    ],
-    "compilerOptions": {
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["docs/*"]
-        },
-        "types": ["vitepress/client", "node"]
-    }
+  "extends": "@vue3-lib/typescript-config/base.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["vite/client"],
+    "allowJs": true,
+    "strict": true
+  },
+  "include": [
+    ".vitepress/**/*.ts",
+    ".vitepress/**/*.vue",
+    "components/**/*.ts",
+    "components/**/*.vue"
+  ]
 }

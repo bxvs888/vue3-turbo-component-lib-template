@@ -1,25 +1,19 @@
 {
+  "extends": "@vue3-lib/typescript-config/base.json",
   "compilerOptions": {
-    "target": "ES2018",
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "strict": true,
+    "declaration": true,
+    "declarationDir": "es",
     "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
+    "lib": ["ES2018", "DOM", "DOM.Iterable"],
+    "types": ["node", "vite/client"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
-    "skipLibCheck": true,
-    "outDir": "dist",
-    "declaration": true,
-    "declarationDir": "dist/types",
-    "isolatedModules": true,
-    "allowJs": true
+    "moduleResolution": "bundler",
+    "allowJs": true,
+    "skipLibCheck": true
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "es", "lib"]
 }

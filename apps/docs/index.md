@@ -1,25 +1,22 @@
 ---
 layout: home
 hero:
-  name: Vue3 组件库
-  text: 基于 Vue 3 + TypeScript 的组件库
-  tagline: 简单、高效、可定制
+  name: Vue3 Component Library
+  text: A Vue3 Component Library
+  tagline: Simple, powerful, and performant.
   actions:
     - theme: brand
-      text: 开始使用
-      link: /guide/introduction
+      text: Get Started
+      link: /guide/
     - theme: alt
-      text: 在 GitHub 上查看
+      text: View on GitHub
       link: https://github.com/your-repo
 
 features:
-  - icon: ⚡️
-    title: Vue 3 驱动
-    details: 享受 Vue 3 + TypeScript 带来的开发体验
-  - icon: 🛠️
-    title: 组件丰富
-    details: 提供丰富的组件满足业务需求
-  - icon: 📦
-    title: 按需引入
-    details: 支持按需引入，优化项目体积
+  - title: Feature A
+    details: Description of feature A
+  - title: Feature B
+    details: Description of feature B
+  - title: Feature C
+    details: Description of feature C
 ---

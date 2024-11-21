@@ -1,10 +1,16 @@
-import type { App } from 'vue';
-import { Button } from './components';
+import type { App } from '@vue/runtime-core';
+import { VButton } from './components';
 
-export { Button };
+const components = [VButton];
+
+function install(app: App) {
+  components.forEach((component) => {
+    app.use(component);
+  });
+}
+
+export { VButton, install };
 
 export default {
-  install: (app: App) => {
-    app.component('VButton', Button);
-  }
+  install
 };

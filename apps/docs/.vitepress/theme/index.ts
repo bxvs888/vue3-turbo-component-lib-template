@@ -1,19 +1,11 @@
 import DefaultTheme from 'vitepress/theme';
-import type { Theme } from 'vitepress';
-import type { Component } from 'vue';
-import '@vue3-lib/ui/dist/style.css';
-import './styles/main.scss';
+import type { App } from 'vue';
+import { install } from '@vue3-lib/ui';
+import '@vue3-lib/ui/dist/styles/index.css';
 
 export default {
   extends: DefaultTheme,
-  enhanceApp({ app }) {
-    // 注册全局组件
-    import('@vue3-lib/ui').then((module: Record<string, Component>) => {
-      Object.entries(module).forEach(([name, component]) => {
-        if (name !== 'default') {
-          app.component(name, component);
-        }
-      });
-    });
+  enhanceApp({ app }: { app: App }) {
+    install(app);
   }
-} satisfies Theme;
+};

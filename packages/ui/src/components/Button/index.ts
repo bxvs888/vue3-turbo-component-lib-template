@@ -1,10 +1,7 @@
-import type { App } from 'vue';
+import { withInstall } from '../../utils/with-install';
 import Button from './Button.vue';
 
-export { Button };
+export const VButton = withInstall(Button);
+export default VButton;
 
-export default {
-  install(app: App) {
-    app.component('VButton', Button);
-  }
-};
+export * from './Button.types';

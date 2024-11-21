@@ -1,7 +1,5 @@
 declare module 'vue' {
   export interface GlobalComponents {
-    VButton: (typeof import('../components/Button'))['Button'];
+    VButton: (typeof import('../components/Button'))['VButton'];
   }
 }
-
-export {};
