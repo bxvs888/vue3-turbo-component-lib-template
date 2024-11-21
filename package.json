@@ -1,0 +1,32 @@
+{
+    "name": "vue3-component-lib",
+    "version": "1.0.0",
+    "private": true,
+    "engines": {
+        "node": ">=18.0.0",
+        "pnpm": ">=9.0.0",
+        "npm": "please-use-pnpm",
+        "yarn": "please-use-pnpm"
+    },
+    "scripts": {
+        "build": "turbo run build",
+        "dev": "turbo run dev",
+        "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:style",
+        "lint:eslint": "eslint . --ext .js,.ts,.jsx,.tsx,.vue --fix",
+        "lint:prettier": "prettier --write \"**/*.{js,ts,jsx,tsx,vue,css,scss,less,json,md}\"",
+        "lint:style": "stylelint \"**/*.{css,scss,less,vue}\" --fix",
+        "clean": "turbo run clean",
+        "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+        "preinstall": "npx only-allow pnpm",
+        "prepare": "husky install"
+    },
+    "devDependencies": {
+        "@changesets/cli": "^2.27.1",
+        "prettier": "^3.3.3",
+        "turbo": "^2.3.0",
+        "typescript": "^5.4.2",
+        "@types/node": "^20.11.24",
+        "husky": "^9.0.11",
+        "lint-staged": "^15.2.2"
+    }
+}

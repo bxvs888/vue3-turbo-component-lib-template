@@ -1,0 +1,13 @@
+{
+  "name": "@vue3-lib/commitlint-config",
+  "version": "0.0.1",
+  "private": true,
+  "main": "index.mjs",
+  "dependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2"
+  },
+  "peerDependencies": {
+    "@commitlint/cli": "^18.6.1"
+  }
+}

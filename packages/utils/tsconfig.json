@@ -1,0 +1,11 @@
+{
+    "extends": "@vue3-lib/typescript-config/base.json",
+    "include": ["src/**/*.ts", "src/**/*.d.ts"],
+    "exclude": ["dist", "build", "node_modules"],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    }
+}
