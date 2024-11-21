@@ -1,23 +1,21 @@
 {
-    "name": "@vue3-lib/utils",
-    "version": "0.0.1",
-    "main": "./dist/index.js",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.ts",
-    "sideEffects": false,
-    "license": "MIT",
-    "files": [
-        "dist/**"
-    ],
-    "scripts": {
-        "build": "tsup",
-        "dev": "tsup --watch",
-        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
-    },
-    "devDependencies": {
-        "tsup": "^8.0.2",
-        "typescript": "^5.4.2",
-        "@types/node": "^20.11.24",
-        "@vue3-lib/typescript-config": "workspace:*"
-    }
+  "name": "@vue3-lib/utils",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.2",
+    "@types/node": "^20.11.24",
+    "@vue3-lib/typescript-config": "workspace:*"
+  }
 }
