@@ -14,3 +14,26 @@
 - `playground/`：演练场，用于测试和演示组件的示例应用，使用 Vite 构建。
 
 此外，项目还包括自动化脚本和持续集成配置，以支持高效的开发流程和质量保证。
+
+## 相关链接
+
+> 部分代码和结构设计参考了[vben5](https://github.com/vbenjs/vue-vben-admin)
+
+- [Vue 3](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Turborepo](https://turbo.build/repo)
+- [Vitepress](https://vitepress.dev/)
+- [Vite](https://vitejs.dev/)
+- [vben-admin](https://github.com/vbenjs/vue-vben-admin)
+
+## 贡献指南
+
+1. Fork 本仓库
+2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交你的改动 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 打开一个 Pull Request
+
+## License
+
+[MIT](LICENSE)
