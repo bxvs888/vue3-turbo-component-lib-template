@@ -13,15 +13,15 @@ const router = createRouter({
         },
         {
           path: '/ui',
-          component: () => import('@/views/UIDemo.vue')
+          component: () => import('@/views/Ui.vue')
         },
         {
           path: '/hooks',
-          component: () => import('@/views/HooksDemo.vue')
+          component: () => import('@/views/Hooks.vue')
         },
         {
           path: '/utils',
-          component: () => import('@/views/UtilsDemo.vue')
+          component: () => import('@/views/Utils.vue')
         }
       ]
     }

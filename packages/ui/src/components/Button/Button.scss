@@ -1,37 +1,48 @@
 .v-button {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  height: 32px;
-  white-space: nowrap;
-  cursor: pointer;
-  color: #606266;
-  text-align: center;
+  $types: (
+    primary: #409eff,
+    success: #67c23a,
+    warning: #e6a23c,
+    danger: #f56c6c,
+    info: #909399
+  );
+
   box-sizing: border-box;
-  outline: none;
-  transition: 0.1s;
-  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
   padding: 8px 15px;
   font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  color: #606266;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
   border-radius: 4px;
+  outline: none;
+  transition: 0.1s;
 
-  &--primary {
-    color: #fff;
-    background-color: #409eff;
-    border-color: #409eff;
-
-    &:hover {
-      background: #66b1ff;
-      border-color: #66b1ff;
-    }
-  }
-
+  // 尺寸
   &--medium {
     padding: 8px 15px;
     font-size: 14px;
   }
 
+  &--small {
+    height: 24px;
+    padding: 5px 11px;
+    font-size: 12px;
+  }
+
+  &--large {
+    height: 40px;
+    padding: 12px 19px;
+    font-size: 16px;
+  }
+
+  // 状态
   &.is-disabled {
     cursor: not-allowed;
     opacity: 0.5;
@@ -41,6 +52,7 @@
     border-radius: 20px;
   }
 
+  // 朴素按钮
   &.is-plain {
     background: #fff;
     border: 1px solid #dcdfe6;
@@ -48,6 +60,33 @@
     &:hover {
       background: #ecf5ff;
       border-color: #409eff;
+    }
+  }
+
+  // 类型
+  @each $type, $color in $types {
+    &--#{$type} {
+      color: #fff;
+      background-color: $color;
+      border-color: $color;
+
+      &:hover {
+        $hover-color: mix(#fff, $color, 20%);
+        background: $hover-color;
+        border-color: $hover-color;
+      }
+    }
+
+    &.is-plain.v-button--#{$type} {
+      color: $color;
+      background: mix(#fff, $color, 90%);
+      border-color: mix(#fff, $color, 60%);
+
+      &:hover {
+        color: #fff;
+        background: $color;
+        border-color: $color;
+      }
     }
   }
 }

@@ -2,6 +2,7 @@
   "extends": "@vue3-lib/typescript-config/vite.json",
   "compilerOptions": {
     "skipLibCheck": true,
+    "types": ["vite/client"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",

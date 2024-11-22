@@ -4,6 +4,7 @@ export default {
     'stylelint-config-recommended-vue',
     'stylelint-config-recess-order'
   ],
+  customSyntax: 'postcss-html',
   overrides: [
     {
       files: ['**/*.(vue|html)'],
@@ -14,6 +15,7 @@ export default {
     'selector-class-pattern': null,
     'no-descending-specificity': null,
     'no-invalid-double-slash-comments': null,
+    'no-unknown-animations': null,
     'property-no-unknown': [true, { ignoreProperties: ['//'] }]
   }
 };
