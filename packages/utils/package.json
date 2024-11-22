@@ -9,7 +9,6 @@
     "dist"
   ],
   "scripts": {
-    "dev": "rollup -c rollup.config.ts --configPlugin typescript -w",
     "build": "rm -rf dist && rollup -c rollup.config.ts --configPlugin typescript",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },

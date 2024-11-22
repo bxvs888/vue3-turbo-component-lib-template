@@ -7,6 +7,6 @@ import 'ant-design-vue/dist/reset.css';
 import '@vue3-lib/ui/dist/styles/index.css';
 
 const app = createApp(App);
-app.use(Antd);
+app.use(Antd); // 全局引入antdv组件
 app.use(router);
 app.mount('#app');

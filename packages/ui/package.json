@@ -19,7 +19,6 @@
   ],
   "scripts": {
     "build": "rm -rf dist && vite build",
-    "dev": "vite build --watch",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
