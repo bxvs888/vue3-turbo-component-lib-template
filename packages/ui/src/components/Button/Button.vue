@@ -24,18 +24,18 @@ defineOptions({
   name: 'VButton'
 });
 
-const props = withDefaults(defineProps<ButtonProps>(), {
-  type: undefined,
-  size: 'medium',
-  disabled: false,
-  plain: false,
-  round: false
-});
+const {
+  type = undefined,
+  size = 'medium',
+  disabled = false,
+  plain = false,
+  round = false
+} = defineProps<ButtonProps>();
 
 const emit = defineEmits<ButtonEmits>();
 
 const handleClick = (event: MouseEvent) => {
-  if (!props.disabled) {
+  if (!disabled) {
     emit('click', event);
   }
 };

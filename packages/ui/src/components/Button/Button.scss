@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 .v-button {
   $types: (
     primary: #409eff,
@@ -71,7 +73,8 @@
       border-color: $color;
 
       &:hover {
-        $hover-color: mix(#fff, $color, 20%);
+        $hover-color: color.mix(#fff, $color, 20%);
+
         background: $hover-color;
         border-color: $hover-color;
       }
@@ -79,8 +82,8 @@
 
     &.is-plain.v-button--#{$type} {
       color: $color;
-      background: mix(#fff, $color, 90%);
-      border-color: mix(#fff, $color, 60%);
+      background: color.mix(#fff, $color, 90%);
+      border-color: color.mix(#fff, $color, 60%);
 
       &:hover {
         color: #fff;
