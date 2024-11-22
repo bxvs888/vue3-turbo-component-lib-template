@@ -49,7 +49,7 @@ const pageTitle = computed(() => {
   const titles: Record<string, string> = {
     ui: 'UI 组件展示',
     hooks: 'Hooks 示例',
-    utils: '工具函数演示'
+    utils: '工具函数演示',
   };
   return titles[selectedKeys.value[0]] || '';
 });

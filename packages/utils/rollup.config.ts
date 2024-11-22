@@ -8,12 +8,12 @@ export default defineConfig({
   output: [
     {
       file: 'dist/index.js',
-      format: 'cjs'
+      format: 'cjs',
     },
     {
       file: 'dist/index.mjs',
-      format: 'es'
-    }
+      format: 'es',
+    },
   ],
   plugins: [
     nodeResolve(),
@@ -22,7 +22,7 @@ export default defineConfig({
       tsconfig: './tsconfig.json',
       declarationDir: './dist',
       outDir: './dist',
-      declaration: true
-    })
-  ]
+      declaration: true,
+    }),
+  ],
 });

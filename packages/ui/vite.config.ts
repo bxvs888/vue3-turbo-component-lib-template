@@ -8,8 +8,8 @@ import { fileURLToPath } from 'node:url';
 export default defineConfig({
   resolve: {
     alias: {
-      '@': path.resolve(fileURLToPath(new URL('.', import.meta.url)), 'src')
-    }
+      '@': path.resolve(fileURLToPath(new URL('.', import.meta.url)), 'src'),
+    },
   },
   plugins: [
     vue(),
@@ -18,12 +18,12 @@ export default defineConfig({
       outDir: ['dist/es', 'dist/lib'],
       beforeWriteFile: (filePath, content) => ({
         filePath: filePath.replace('/src/', '/'),
-        content
+        content,
       }),
       compilerOptions: {
-        composite: false
-      }
-    })
+        composite: false,
+      },
+    }),
   ],
   build: {
     target: 'modules',
@@ -34,22 +34,22 @@ export default defineConfig({
       name: 'VueUI',
       formats: ['es', 'cjs'],
       fileName: (format) =>
-        `${format === 'es' ? 'es' : 'lib'}/index.${format === 'es' ? 'mjs' : 'js'}`
+        `${format === 'es' ? 'es' : 'lib'}/index.${format === 'es' ? 'mjs' : 'js'}`,
     },
     rollupOptions: {
       external: ['vue'],
       output: {
         exports: 'named',
         globals: {
-          vue: 'Vue'
+          vue: 'Vue',
         },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === 'style.css') {
             return 'styles/index.css';
           }
           return assetInfo.name!;
-        }
-      }
-    }
-  }
+        },
+      },
+    },
+  },
 });

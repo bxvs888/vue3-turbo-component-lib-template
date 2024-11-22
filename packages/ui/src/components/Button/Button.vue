@@ -7,8 +7,8 @@
       {
         'is-plain': plain,
         'is-round': round,
-        'is-disabled': disabled
-      }
+        'is-disabled': disabled,
+      },
     ]"
     :disabled="disabled"
     @click="handleClick"
@@ -21,7 +21,7 @@
 import { ButtonProps, ButtonEmits } from './Button.types';
 
 defineOptions({
-  name: 'VButton'
+  name: 'VButton',
 });
 
 const {
@@ -29,7 +29,7 @@ const {
   size = 'medium',
   disabled = false,
   plain = false,
-  round = false
+  round = false,
 } = defineProps<ButtonProps>();
 
 const emit = defineEmits<ButtonEmits>();

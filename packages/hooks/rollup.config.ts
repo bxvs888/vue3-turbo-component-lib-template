@@ -6,20 +6,20 @@ export default {
   output: [
     {
       file: 'dist/index.js',
-      format: 'cjs'
+      format: 'cjs',
     },
     {
       file: 'dist/index.mjs',
-      format: 'es'
-    }
+      format: 'es',
+    },
   ],
   plugins: [
     nodeResolve(),
     typescript({
       tsconfig: './tsconfig.json',
       declaration: true,
-      declarationDir: 'dist'
-    })
+      declarationDir: 'dist',
+    }),
   ],
-  external: ['vue']
+  external: ['vue'],
 };

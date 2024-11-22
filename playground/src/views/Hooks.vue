@@ -13,7 +13,7 @@ const activeKey = ref(0);
 
 const components = import.meta.glob('./components/Hooks/**.vue', {
   eager: true,
-  import: 'default'
+  import: 'default',
 });
 
 const renderCmp = Object.entries(components).map(([path, component], index) => {
@@ -21,7 +21,7 @@ const renderCmp = Object.entries(components).map(([path, component], index) => {
   return {
     name,
     component,
-    index
+    index,
   };
 });
 </script>

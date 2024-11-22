@@ -27,13 +27,13 @@
     "dev:play": "pnpm -F @vue3-lib/playground run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"",
     "clean": "turbo run clean",
     "version-packages": "changeset version",
-    "preinstall": "npx only-allow pnpm",
-    "prepare": "husky install",
     "update:deps": "pnpm update -r --latest",
-    "update:check": "pnpm outdated -r"
+    "update:check": "pnpm outdated -r",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.10",

@@ -10,21 +10,21 @@
 - `packages/hooks`：包含所有自定义 Hooks 的包。
 - `packages/utils`：包含所有工具函数的包。
 - `packages/ui`：包含所有 UI 组件的包。
-- `apps/docs/`：文档应用，使用 Vitepress 构建，提供详尽的组件库文档和使用指南。
-- `playground/`：演练场，用于测试和演示组件的示例应用，使用 Vite 构建。
+- `apps/docs`：文档应用，使用 Vitepress 构建，提供详尽的组件库文档和使用指南。
+- `playground`：演练场，用于测试和演示组件的示例应用，使用 Vite 构建。
 
 此外，项目还包括自动化脚本和持续集成配置，以支持高效的开发流程和质量保证。
 
 ## 相关链接
 
-> 部分代码和结构设计参考了[vben5](https://github.com/vbenjs/vue-vben-admin)
+> 部分代码和结构设计参考了[Vben5](https://github.com/vbenjs/vue-vben-admin)
 
 - [Vue 3](https://vuejs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Turborepo](https://turbo.build/repo)
 - [Vitepress](https://vitepress.dev/)
 - [Vite](https://vitejs.dev/)
-- [vben-admin](https://github.com/vbenjs/vue-vben-admin)
+- [Vben-admin](https://github.com/vbenjs/vue-vben-admin)
 
 ## 贡献指南
 

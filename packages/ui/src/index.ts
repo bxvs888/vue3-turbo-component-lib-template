@@ -12,5 +12,5 @@ function install(app: App) {
 export { VButton, install };
 
 export default {
-  install
+  install,
 };

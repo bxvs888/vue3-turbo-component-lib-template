@@ -9,23 +9,23 @@ const router = createRouter({
       children: [
         {
           path: '',
-          redirect: '/ui'
+          redirect: '/ui',
         },
         {
           path: '/ui',
-          component: () => import('@/views/Ui.vue')
+          component: () => import('@/views/Ui.vue'),
         },
         {
           path: '/hooks',
-          component: () => import('@/views/Hooks.vue')
+          component: () => import('@/views/Hooks.vue'),
         },
         {
           path: '/utils',
-          component: () => import('@/views/Utils.vue')
-        }
-      ]
-    }
-  ]
+          component: () => import('@/views/Utils.vue'),
+        },
+      ],
+    },
+  ],
 });
 
 export default router;
