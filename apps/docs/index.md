@@ -1,24 +1,25 @@
 ---
-# https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
 hero:
-  name: '我的超棒项目'
-  text: '一个 VitePress 网站'
-  tagline: 我的伟大项目标语
+  name: vue3-component-lib
+  text: Vue3 组件库和工具集
+  tagline: 简单、强大、高性能的 Vue3 工具库
   actions:
     - theme: brand
-      text: Markdown 示例
-      link: /markdown-examples
+      text: 开始使用
+      link: /guide/
     - theme: alt
-      text: API 示例
-      link: /api-examples
+      text: 在 GitHub 上查看
+      link: https://github.com/huangmingfu/vue3-turbo-component-lib-template
 
 features:
-  - title: 特性 A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 特性 B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: 特性 C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon: 🛠️
+    title: UI 组件
+    details: 提供高质量的 Vue3 组件，支持按需引入，主题定制等特性
+  - icon: 🔧
+    title: 工具函数
+    details: 常用工具函数集合，提高开发效率，减少重复代码
+  - icon: 🎯
+    title: Hooks
+    details: 可复用的组合式函数，让逻辑复用更简单
 ---
