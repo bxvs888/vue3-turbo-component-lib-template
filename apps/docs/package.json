@@ -1,21 +1,17 @@
 {
   "name": "@vue3-lib/docs",
-  "version": "0.0.1",
-  "private": true,
-  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vitepress dev .",
-    "build": "vitepress build .",
-    "preview": "vitepress preview ."
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
   },
-  "dependencies": {
-    "@vue3-lib/ui": "workspace:*",
-    "vue": "^3.4.21"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "vitepress": "^1.0.0-rc.44",
-    "@vue/compiler-sfc": "^3.4.21",
-    "sass": "^1.81.0"
+    "vitepress": "^1.5.0"
   }
 }

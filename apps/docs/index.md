@@ -1,22 +1,24 @@
 ---
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
+
 hero:
-  name: Vue3 Component Library
-  text: A Vue3 Component Library
-  tagline: Simple, powerful, and performant.
+  name: 'My Awesome Project'
+  text: 'A VitePress Site'
+  tagline: My great project tagline
   actions:
     - theme: brand
-      text: Get Started
-      link: /guide/
+      text: Markdown Examples
+      link: /markdown-examples
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/your-repo
+      text: API Examples
+      link: /api-examples
 
 features:
   - title: Feature A
-    details: Description of feature A
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature B
-    details: Description of feature B
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: Feature C
-    details: Description of feature C
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
