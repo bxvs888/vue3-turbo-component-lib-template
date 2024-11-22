@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "main": "index.mjs",
+  "scripts": {
+    "clean": "rm -rf .turbo && rm -rf node_modules"
+  },
   "dependencies": {
     "prettier": "^3.3.3"
   },

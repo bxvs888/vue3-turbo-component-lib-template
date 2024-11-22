@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "build": "rm -rf dist && rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "dev": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript -w"
+    "dev": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript -w",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
     "vue": "^3.0.0"

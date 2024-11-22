@@ -8,13 +8,11 @@ export default defineConfig({
   output: [
     {
       file: 'dist/index.js',
-      format: 'cjs',
-      sourcemap: false
+      format: 'cjs'
     },
     {
       file: 'dist/index.mjs',
-      format: 'es',
-      sourcemap: false
+      format: 'es'
     }
   ],
   plugins: [
@@ -22,7 +20,6 @@ export default defineConfig({
     commonjs(),
     typescript({
       tsconfig: './tsconfig.json',
-      sourceMap: false,
       declarationDir: './dist',
       outDir: './dist',
       declaration: true
