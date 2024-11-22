@@ -1,7 +1,26 @@
 {
   "name": "vue3-component-lib",
+  "description": "This is a modern component library template based on Turborepo+Vue 3+TypeScript.",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "author": "huangmingfu <212149997@qq.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/huangmingfu/vue3-turbo-component-lib-template",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huangmingfu/vue3-turbo-component-lib-template"
+  },
+  "bugs": "https://github.com/huangmingfu/vue3-turbo-component-lib-template/issues",
+  "keywords": [
+    "component-template",
+    "component-lib",
+    "turborepo",
+    "monorepo",
+    "vue3",
+    "vite5",
+    "turbo"
+  ],
   "scripts": {
     "dev": "turbo run dev",
     "dev:docs": "pnpm -F @vue3-lib/docs run dev",
@@ -31,8 +50,8 @@
     "stylelint-config-standard-scss": "^10.0.0",
     "stylelint-config-recommended-vue": "^1.5.0"
   },
-  "packageManager": "pnpm@9.12.3",
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=18",
+    "pnpm": ">=9"
   }
 }
