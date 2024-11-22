@@ -5,7 +5,6 @@ node_modules
 .nvmrc
 .output
 
-
 **/*.svg
 **/*.sh
 
