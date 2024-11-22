@@ -1,4 +1,4 @@
-import { withInstall } from '../../utils/with-install';
+import { withInstall } from '@/_utils';
 import Button from './Button.vue';
 
 export const VButton = withInstall(Button);

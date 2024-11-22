@@ -2,8 +2,15 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 import { resolve } from 'path';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(fileURLToPath(new URL('.', import.meta.url)), 'src')
+    }
+  },
   plugins: [
     vue(),
     dts({
