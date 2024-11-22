@@ -17,13 +17,14 @@
     "component-lib",
     "turborepo",
     "monorepo",
-    "vue3",
+    "vue3-typescript",
     "vite5",
     "turbo"
   ],
   "scripts": {
     "dev": "turbo run dev",
     "dev:docs": "pnpm -F @vue3-lib/docs run dev",
+    "dev:play": "pnpm -F @vue3-lib/playground run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md}\"",
