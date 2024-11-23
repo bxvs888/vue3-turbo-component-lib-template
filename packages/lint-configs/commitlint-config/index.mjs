@@ -16,6 +16,7 @@ export default {
         'ci', // 更改持续集成文件和脚本
         'chore', // 其他不修改src或test文件的更改
         'revert', // 撤销之前的提交
+        'wip', // 开发中
       ],
     ],
   },

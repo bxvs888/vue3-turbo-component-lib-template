@@ -1,12 +1,28 @@
 # Button 按钮
 
-Button 按钮基础按钮组件。基础用法基础的按钮用法。
+基础的按钮组件。
 
-<!-- <script setup>
-import { VButton } from '@mylib/ui'
-</script>
+## 基础用法
 
-<VButton>默认按钮</VButton> -->
+<Demo>
+  <basic />
+  <template #code>
+    ```vue
+    <<< @/examples/button/basic.vue
+    ```
+  </template>
+</Demo>
+
+## 圆角按钮
+
+<Demo>
+  <round-demo />
+  <template #code>
+    ```vue
+    <<< @/examples/button/round.vue
+    ```
+  </template>
+</Demo>
 
 | 属性     | 参数     | 说明                             | 类型      | 默认值 |
 | -------- | -------- | -------------------------------- | --------- | ------ |
