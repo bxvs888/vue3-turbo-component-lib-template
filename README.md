@@ -1,6 +1,18 @@
-# 组件库模板
+# vue3组件库模板
 
-这是一个基于 `Turborepo + Vue 3 + TypeScript` 的现代化组件库模板，采用 Monorepo 架构来管理多个包，涵盖了 ESLint、Prettier、Stylelint、Commitlint + Husky + Lint-Staged 和 TypeScript 的项目规范配置。此模板提供了一套完整的开发环境，旨在让开发者能够专注于组件的开发，而无需担心底层配置的复杂性。
+这是一个基于 `Turborepo + Vue 3.5 + TypeScript` 的现代化组件库模板，采用 Monorepo 架构来管理多个包，涵盖了 ESLint、Prettier、Stylelint、Commitlint + Husky + Lint-Staged 和 TypeScript 的项目规范配置。此模板提供了一套完整的开发环境，旨在让开发者能够专注于组件的开发，而无需担心底层配置的复杂性。
+
+## ✨ 特性
+
+- 📦 基于 Monorepo 架构，更好的代码复用和版本管理
+- 🚀 使用 Turbo + Vue 3.5 + TypeScript，享受最新特性
+- 🎨 集成完整的代码规范配置，保证代码质量
+- 📚 使用 VitePress 构建文档，支持 Markdown 增强语法
+- 🔥 组件库支持按需引入，减小打包体积
+- 🎯 完整的类型提示，提升开发体验
+- 🛠️ 丰富的工具函数和 Hooks，提高开发效率
+- 🔄 支持热更新，提升开发体验
+- ⚡️ 基于 Vite 构建，开发体验极致
 
 ## 📦 项目结构
 
@@ -14,6 +26,12 @@
 - `playground`：演练场，用于测试和演示组件的示例应用，使用 Vite 构建。
 
 此外，项目还包括自动化脚本和持续集成配置，以支持高效的开发流程和质量保证。
+
+## 🚀 快速开始
+
+```bash
+pnpm install @mylib/ui @mylib/utils @mylib/hooks
+```
 
 ## 相关链接
 

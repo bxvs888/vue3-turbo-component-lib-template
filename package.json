@@ -1,6 +1,6 @@
 {
-  "name": "vue3-component-lib",
-  "description": "This is a modern component library template based on Turborepo+Vue 3+TypeScript.",
+  "name": "vue3-component-lib-template",
+  "description": "This is a modern component library template based on Turborepo+Vue 3.5+TypeScript.",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@9.12.3",
@@ -26,6 +26,7 @@
     "dev:docs": "pnpm -F @mylib/docs run dev",
     "dev:play": "pnpm -F @mylib/playground run dev",
     "build": "turbo run build",
+    "build:docs": "pnpm -F @mylib/docs run build",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean",

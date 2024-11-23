@@ -5,7 +5,6 @@
       type ? `v-button--${type}` : '',
       size ? `v-button--${size}` : '',
       {
-        'is-plain': plain,
         'is-round': round,
         'is-disabled': disabled,
       },
@@ -28,7 +27,6 @@ const {
   type = undefined,
   size = 'medium',
   disabled = false,
-  plain = false,
   round = false,
 } = defineProps<ButtonProps>();
 

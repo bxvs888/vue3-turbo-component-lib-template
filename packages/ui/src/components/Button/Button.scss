@@ -6,7 +6,7 @@
     success: #67c23a,
     warning: #e6a23c,
     danger: #f56c6c,
-    info: #909399
+    info: #909399,
   );
 
   box-sizing: border-box;
@@ -52,17 +52,6 @@
 
   &.is-round {
     border-radius: 20px;
-  }
-
-  // 朴素按钮
-  &.is-plain {
-    background: #fff;
-    border: 1px solid #dcdfe6;
-
-    &:hover {
-      background: #ecf5ff;
-      border-color: #409eff;
-    }
   }
 
   // 类型

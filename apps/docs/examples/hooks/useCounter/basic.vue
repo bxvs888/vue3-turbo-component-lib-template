@@ -1,8 +1,8 @@
 <template>
   <div class="demo">
-    <button @click="decrement">decrement</button>
-    <span>{{ count }}</span>
     <button @click="increment">increment</button>
+    <span>{{ count }}</span>
+    <button @click="decrement">decrement</button>
   </div>
 </template>
 
@@ -12,9 +12,13 @@ import { useCounter } from '@mylib/hooks';
 const { count, increment, decrement } = useCounter();
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .demo {
   display: flex;
   flex-direction: column;
+
+  span {
+    text-align: center;
+  }
 }
 </style>
