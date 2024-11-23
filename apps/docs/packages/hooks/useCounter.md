@@ -1,6 +1,4 @@
-# Hooks
-
-## useCounter
+# useCounter
 
 > 计数器 Hook。
 

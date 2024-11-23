@@ -10,7 +10,25 @@ Vue3 Library 是一个基于 Vue3 的组件库和工具集，包含以下几个�
 
 ## 安装
 
-使用包管理器安装：
+使用包管理器安装：::: code-group
+
+```bash [npm]
+npm install @mylib/ui @mylib/utils @mylib/hooks
+```
+
+```bash [yarn]
+yarn add @mylib/ui @mylib/utils @mylib/hooks
+```
+
+```bash [pnpm]
+pnpm add @mylib/ui @mylib/utils @mylib/hooks
+```
+
+```bash [bun]
+bun add @mylib/ui @mylib/utils @mylib/hooks
+```
+
+:::
 
 ## 使用
 
@@ -22,6 +40,12 @@ import UI from '@mylib/ui';
 import '@mylib/ui/dist/styles/index.css';
 const app = createApp(App);
 app.use(UI);
+
+// 按需引入
+import { Button } from '@mylib/ui';
+import '@mylib/ui/dist/styles/index.css';
+const app = createApp(App);
+app.use(Button);
 ```
 
 ### 工具函数
