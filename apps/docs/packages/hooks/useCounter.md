@@ -2,18 +2,6 @@
 
 > 计数器 Hook。
 
-```ts
-<script setup>
-import { useCounter } from '@mylib/hooks'
+## 基础用法
 
-const { count, increment, decrement } = useCounter()
-</script>
-
-<template>
-  <div>
-    <button @click="decrement">-</button>
-    <span>{{ count }}</span>
-    <button @click="increment">+</button>
-  </div>
-</template>
-```
+<demo vue="hooks/useCounter/basic.vue" />

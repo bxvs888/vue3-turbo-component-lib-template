@@ -13,12 +13,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mylib/hooks": "workspace:*",
     "@mylib/ui": "workspace:*",
     "@mylib/utils": "workspace:*",
-    "@mylib/hooks": "workspace:*"
+    "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^4.1.0",
     "vitepress": "^1.5.0",
-    "@vitejs/plugin-vue-jsx": "^4.1.0"
+    "vitepress-demo-plugin": "^1.1.2"
   }
 }

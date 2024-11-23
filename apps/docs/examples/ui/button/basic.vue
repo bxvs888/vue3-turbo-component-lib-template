@@ -1,16 +1,21 @@
 <template>
   <div class="demo-button">
-    <v-button>默认按钮</v-button>
-    <v-button type="primary">主要按钮</v-button>
-    <v-button type="success">成功按钮</v-button>
-    <v-button type="warning">警告按钮</v-button>
-    <v-button type="danger">危险按钮</v-button>
+    <VButton>按钮</VButton>
+    <VButton type="primary">按钮</VButton>
+    <VButton type="success">按钮</VButton>
+    <VButton type="warning">按钮</VButton>
+    <VButton type="danger">按钮</VButton>
+    <VButton type="info">按钮</VButton>
   </div>
 </template>
+
+<script setup lang="ts">
+import { VButton } from '@mylib/ui';
+</script>
 
 <style scoped>
 .demo-button {
   display: flex;
-  gap: 10px;
+  gap: 16px;
 }
 </style>

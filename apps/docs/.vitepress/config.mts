@@ -1,6 +1,8 @@
 import { defineConfig } from 'vitepress';
 import { fileURLToPath, URL } from 'node:url';
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import { vitepressDemoPlugin } from 'vitepress-demo-plugin';
+import path from 'node:path';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -37,12 +39,14 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template' },
     ],
   },
+  markdown: {
+    config(md) {
+      md.use(vitepressDemoPlugin, {
+        demoDir: path.resolve(__dirname, '../examples'),
+      });
+    },
+  },
   vite: {
     plugins: [vueJsx()],
-    resolve: {
-      alias: {
-        '@examples': fileURLToPath(new URL('../examples', import.meta.url)),
-      },
-    },
   },
 });

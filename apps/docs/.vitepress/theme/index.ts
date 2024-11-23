@@ -1,10 +1,10 @@
 import DefaultTheme from 'vitepress/theme';
-import Demo from '../components/Demo.vue';
 import '@mylib/ui/dist/styles/index.css';
+import { useGlobalComp } from './useGlobalComp';
 
 export default {
-  ...DefaultTheme,
+  extends: DefaultTheme,
   enhanceApp({ app }) {
-    app.component('Demo', Demo);
+    useGlobalComp(app);
   },
 };
