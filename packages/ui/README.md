@@ -1,4 +1,4 @@
-# @vue3-lib/ui
+# @mylib/ui
 
 Vue 3 组件库，基于 Vue 3 + TypeScript 构建的现代化组件库。
 
@@ -15,11 +15,11 @@ Vue 3 组件库，基于 Vue 3 + TypeScript 构建的现代化组件库。
 
 ```bash
 npm
-npm install @vue3-lib/ui
+npm install @mylib/ui
 yarn
-yarn add @vue3-lib/ui
+yarn add @mylib/ui
 pnpm
-pnpm add @vue3-lib/ui
+pnpm add @mylib/ui
 ```
 
 ## 快速开始
@@ -27,8 +27,8 @@ pnpm add @vue3-lib/ui
 ```ts
 // main.ts
 import { createApp } from 'vue';
-import VUI from '@vue3-lib/ui';
-import '@vue3-lib/ui/dist/style.css';
+import VUI from '@mylib/ui';
+import '@mylib/ui/dist/style.css';
 import App from './App.vue';
 const app = createApp(App);
 app.use(VUI);
@@ -40,8 +40,8 @@ app.mount('#app');
 ```ts
 // main.ts
 import { createApp } from 'vue';
-import { Button } from '@vue3-lib/ui';
-import '@vue3-lib/ui/dist/style.css';
+import { Button } from '@mylib/ui';
+import '@mylib/ui/dist/style.css';
 import App from './App.vue';
 const app = createApp(App);
 app.use(Button);

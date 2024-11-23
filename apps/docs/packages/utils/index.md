@@ -7,7 +7,7 @@
 > 判断是否为字符串。
 
 ```ts
-import { isString } from '@vue3-lib/utils';
+import { isString } from '@mylib/utils';
 
 isString('hello'); // true
 isString(123); // false
@@ -20,7 +20,7 @@ isString(123); // false
 > 判断是否为数组。
 
 ```ts
-import { isArray } from '@vue3-lib/utils';
+import { isArray } from '@mylib/utils';
 
 isArray([1, 2, 3]); // true
 isArray('hello'); // false

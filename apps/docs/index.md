@@ -1,7 +1,7 @@
 ---
 layout: home
 hero:
-  name: vue3-component-lib
+  name: mylib-template
   text: Vue3 组件库和工具集
   tagline: 简单、强大、高性能的 Vue3 工具库
   actions:

@@ -1,5 +1,5 @@
 {
-  "name": "@vue3-lib/stylelint-config",
+  "name": "@mylib/stylelint-config",
   "version": "0.0.1",
   "private": true,
   "type": "module",

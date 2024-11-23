@@ -1,4 +1,3 @@
 - [ ] 添加 utils 包测试用例（jest或vitest）
 - [ ] 完善docs文档
-- [ ] 编写脚本一键修改 @vue3-lib 的包名，方便统一修改
 - [ ] github pages 部署

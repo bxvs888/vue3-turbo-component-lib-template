@@ -1,5 +1,5 @@
 {
-  "extends": "@vue3-lib/typescript-config/vite.json",
+  "extends": "@mylib/typescript-config/vite.json",
   "compilerOptions": {
     "skipLibCheck": true,
     "types": ["vite/client"],

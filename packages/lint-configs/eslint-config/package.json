@@ -1,5 +1,5 @@
 {
-  "name": "@vue3-lib/eslint-config",
+  "name": "@mylib/eslint-config",
   "version": "0.0.1",
   "private": true,
   "main": "index.mjs",

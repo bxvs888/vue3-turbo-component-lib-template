@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import * as utils from '@vue3-lib/utils';
+import * as utils from '@mylib/utils';
 
 const allUtils = Object.entries(utils).map(([name, fn], index) => {
   return {

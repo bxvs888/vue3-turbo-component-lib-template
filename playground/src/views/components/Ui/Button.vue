@@ -10,5 +10,5 @@
 </template>
 
 <script setup lang="ts">
-import { VButton } from '@vue3-lib/ui';
+import { VButton } from '@mylib/ui';
 </script>

@@ -13,6 +13,6 @@ export default defineConfig({
     port: 4444,
   },
   optimizeDeps: {
-    include: ['vue', 'ant-design-vue', '@vue3-lib/utils', '@vue3-lib/ui', '@vue3-lib/hooks'],
+    include: ['vue', 'ant-design-vue', '@mylib/utils', '@mylib/ui', '@mylib/hooks'],
   },
 });

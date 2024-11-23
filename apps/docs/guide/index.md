@@ -18,8 +18,8 @@ Vue3 Library 是一个基于 Vue3 的组件库和工具集，包含以下几个�
 
 ```ts
 import { createApp } from 'vue';
-import UI from '@vue3-lib/ui';
-import '@vue3-lib/ui/dist/styles/index.css';
+import UI from '@mylib/ui';
+import '@mylib/ui/dist/styles/index.css';
 const app = createApp(App);
 app.use(UI);
 ```
@@ -27,13 +27,13 @@ app.use(UI);
 ### 工具函数
 
 ```ts
-import { isString } from '@vue3-lib/utils';
+import { isString } from '@mylib/utils';
 console.log(isString('hello')); // true
 ```
 
 ### Hooks
 
 ```ts
-import { useCounter } from '@vue3-lib/hooks';
+import { useCounter } from '@mylib/hooks';
 const { count, increment, decrement } = useCounter();
 ```

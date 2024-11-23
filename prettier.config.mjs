@@ -1,1 +1,1 @@
-export { default } from '@vue3-lib/prettier-config';
+export { default } from '@mylib/prettier-config';

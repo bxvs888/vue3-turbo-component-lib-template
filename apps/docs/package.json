@@ -1,5 +1,5 @@
 {
-  "name": "@vue3-lib/docs",
+  "name": "@mylib/docs",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,11 +7,16 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf .vitepress/cache"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "@mylib/ui": "workspace:*",
+    "@mylib/utils": "workspace:*",
+    "@mylib/hooks": "workspace:*"
+  },
   "devDependencies": {
     "vitepress": "^1.5.0"
   }

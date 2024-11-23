@@ -1,5 +1,5 @@
 {
-  "name": "@vue3-lib/commitlint-config",
+  "name": "@mylib/commitlint-config",
   "version": "0.0.1",
   "private": true,
   "main": "index.mjs",

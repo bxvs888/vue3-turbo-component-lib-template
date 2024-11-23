@@ -1,5 +1,5 @@
 {
-  "name": "@vue3-lib/prettier-config",
+  "name": "@mylib/prettier-config",
   "version": "0.0.1",
   "private": true,
   "main": "index.mjs",

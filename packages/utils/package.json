@@ -1,5 +1,5 @@
 {
-  "name": "@vue3-lib/utils",
+  "name": "@mylib/utils",
   "version": "0.0.1",
   "private": true,
   "main": "dist/index.js",
@@ -16,7 +16,7 @@
     "@rollup/plugin-commonjs": "^28.0.1",
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^12.1.1",
-    "@vue3-lib/typescript-config": "workspace:*",
+    "@mylib/typescript-config": "workspace:*",
     "rollup": "^4.27.3",
     "tslib": "^2.8.1",
     "typescript": "^5.6.3"

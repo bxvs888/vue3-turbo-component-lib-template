@@ -1,3 +1,3 @@
 export default {
-  extends: '@vue3-lib/stylelint-config',
+  extends: '@mylib/stylelint-config',
 };

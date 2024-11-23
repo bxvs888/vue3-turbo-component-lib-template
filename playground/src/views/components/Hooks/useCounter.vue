@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { useCounter } from '@vue3-lib/hooks';
+import { useCounter } from '@mylib/hooks';
 
 const { count, increment, decrement } = useCounter();
 </script>

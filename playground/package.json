@@ -1,16 +1,17 @@
 {
-  "name": "@vue3-lib/playground",
+  "name": "@mylib/playground",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
     "@ant-design/icons-vue": "^7.0.1",
-    "@vue3-lib/hooks": "workspace:*",
-    "@vue3-lib/ui": "workspace:*",
-    "@vue3-lib/utils": "workspace:*",
+    "@mylib/hooks": "workspace:*",
+    "@mylib/ui": "workspace:*",
+    "@mylib/utils": "workspace:*",
     "ant-design-vue": "^4.2.6",
     "vue": "^3.5.13",
     "vue-router": "^4.4.5"

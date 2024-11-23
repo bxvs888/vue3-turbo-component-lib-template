@@ -4,7 +4,7 @@ import App from './App.vue';
 import router from './router';
 import 'ant-design-vue/dist/reset.css';
 // 引入UI库的样式
-import '@vue3-lib/ui/dist/styles/index.css';
+import '@mylib/ui/dist/styles/index.css';
 
 const app = createApp(App);
 app.use(Antd); // 全局引入antdv组件

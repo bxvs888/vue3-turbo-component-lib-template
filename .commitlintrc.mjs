@@ -1,1 +1,1 @@
-export { default } from '@vue3-lib/commitlint-config';
+export { default } from '@mylib/commitlint-config';

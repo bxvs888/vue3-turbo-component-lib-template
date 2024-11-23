@@ -14,25 +14,25 @@ importers:
       '@commitlint/cli':
         specifier: ^19.6.0
         version: 19.6.0(@types/node@22.9.1)(typescript@5.6.3)
-      '@vue3-lib/commitlint-config':
+      '@mylib/commitlint-config':
         specifier: workspace:*
         version: link:packages/lint-configs/commitlint-config
-      '@vue3-lib/eslint-config':
+      '@mylib/eslint-config':
         specifier: workspace:*
         version: link:packages/lint-configs/eslint-config
-      '@vue3-lib/prettier-config':
+      '@mylib/prettier-config':
         specifier: workspace:*
         version: link:packages/lint-configs/prettier-config
-      '@vue3-lib/stylelint-config':
+      '@mylib/stylelint-config':
         specifier: workspace:*
         version: link:packages/lint-configs/stylelint-config
-      '@vue3-lib/typescript-config':
+      '@mylib/typescript-config':
         specifier: workspace:*
         version: link:packages/lint-configs/typescript-config
-      '@vue3-lib/ui':
+      '@mylib/ui':
         specifier: workspace:*
         version: link:packages/ui
-      '@vue3-lib/utils':
+      '@mylib/utils':
         specifier: workspace:*
         version: link:packages/utils
       eslint:
@@ -64,6 +64,16 @@ importers:
         version: 5.6.3
 
   apps/docs:
+    dependencies:
+      '@mylib/hooks':
+        specifier: workspace:*
+        version: link:../../packages/hooks
+      '@mylib/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@mylib/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
     devDependencies:
       vitepress:
         specifier: ^1.5.0
@@ -75,15 +85,15 @@ importers:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.6.3)
     devDependencies:
+      '@mylib/typescript-config':
+        specifier: workspace:*
+        version: link:../lint-configs/typescript-config
       '@rollup/plugin-node-resolve':
         specifier: ^15.3.0
         version: 15.3.0(rollup@4.27.3)
       '@rollup/plugin-typescript':
         specifier: ^12.1.1
         version: 12.1.1(rollup@4.27.3)(tslib@2.8.1)(typescript@5.6.3)
-      '@vue3-lib/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
       rollup:
         specifier: ^4.27.3
         version: 4.27.3
@@ -168,6 +178,9 @@ importers:
 
   packages/ui:
     devDependencies:
+      '@mylib/typescript-config':
+        specifier: workspace:*
+        version: link:../lint-configs/typescript-config
       '@types/node':
         specifier: ^22.9.1
         version: 22.9.1
@@ -177,9 +190,6 @@ importers:
       '@vue/runtime-core':
         specifier: ^3.5.13
         version: 3.5.13
-      '@vue3-lib/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
       sass:
         specifier: ^1.81.0
         version: 1.81.0
@@ -201,6 +211,9 @@ importers:
 
   packages/utils:
     devDependencies:
+      '@mylib/typescript-config':
+        specifier: workspace:*
+        version: link:../lint-configs/typescript-config
       '@rollup/plugin-commonjs':
         specifier: ^28.0.1
         version: 28.0.1(rollup@4.27.3)
@@ -210,9 +223,6 @@ importers:
       '@rollup/plugin-typescript':
         specifier: ^12.1.1
         version: 12.1.1(rollup@4.27.3)(tslib@2.8.1)(typescript@5.6.3)
-      '@vue3-lib/typescript-config':
-        specifier: workspace:*
-        version: link:../lint-configs/typescript-config
       rollup:
         specifier: ^4.27.3
         version: 4.27.3
@@ -228,13 +238,13 @@ importers:
       '@ant-design/icons-vue':
         specifier: ^7.0.1
         version: 7.0.1(vue@3.5.13(typescript@5.6.3))
-      '@vue3-lib/hooks':
+      '@mylib/hooks':
         specifier: workspace:*
         version: link:../packages/hooks
-      '@vue3-lib/ui':
+      '@mylib/ui':
         specifier: workspace:*
         version: link:../packages/ui
-      '@vue3-lib/utils':
+      '@mylib/utils':
         specifier: workspace:*
         version: link:../packages/utils
       ant-design-vue:
