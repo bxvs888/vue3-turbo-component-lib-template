@@ -175,6 +175,7 @@
     "html",
     "markdown",
     "json",
+    // 允许注释的 JSON 格式
     "jsonc",
     "json5"
   ],

@@ -32,5 +32,8 @@
     "strict": true
   },
   // 排除编译的文件和目录
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
