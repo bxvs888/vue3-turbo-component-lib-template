@@ -1,3 +1,2 @@
 - [ ] 添加 utils 包测试用例（jest或vitest）
-- [ ] 完善docs文档
-- [ ] github pages 部署
+- [ ] docs文档添加“更多-更新日志”

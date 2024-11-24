@@ -31,8 +31,8 @@
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean",
     "version-packages": "changeset version",
-    "update:deps": "pnpm update -r --latest",
-    "update:check": "pnpm outdated -r",
+    "deps:update": "pnpm update -r --latest",
+    "deps:check": "pnpm outdated -r",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "rename-pkg": "bash ./scripts/rename-package.sh"

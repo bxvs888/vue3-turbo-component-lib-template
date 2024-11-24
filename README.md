@@ -1,41 +1,43 @@
-# vue3组件库模板
+**English** | [简体中文](./README.zh-CN.md)
 
-这是一个基于 `Turborepo + Vue 3.5 + TypeScript` 的现代化组件库模板，采用 Monorepo 架构来管理多个包，涵盖了 ESLint、Prettier、Stylelint、Commitlint + Husky + Lint-Staged 和 TypeScript 的项目规范配置。此模板提供了一套完整的开发环境，旨在让开发者能够专注于组件的开发，而无需担心底层配置的复杂性。
+# Vue3 Component Library Template
 
-## ✨ 特性
+This is a modern component library template based on `Turborepo + Vue 3.5 + TypeScript`, using Monorepo architecture to manage multiple packages. It includes project specification configurations for ESLint, Prettier, Stylelint, Commitlint + Husky + Lint-Staged, and TypeScript. This template provides a complete development environment, allowing developers to focus on component development without worrying about the complexity of underlying configurations.
 
-- 📦 基于 Monorepo 架构，更好的代码复用和版本管理
-- 🚀 使用 Turbo + Vue 3.5 + TypeScript，享受最新特性
-- 🎨 集成完整的代码规范配置，保证代码质量
-- 📚 使用 VitePress 构建文档，支持 Markdown 增强语法
-- 🔥 组件库支持按需引入，减小打包体积
-- 🎯 完整的类型提示，提升开发体验
-- 🛠️ 丰富的工具函数和 Hooks，提高开发效率
-- 🔄 支持热更新，提升开发体验
-- ⚡️ 基于 Vite 构建，开发体验极致
+## ✨ Features
 
-## 📦 项目结构
+- 📦 Based on Monorepo architecture for better code reuse and version management
+- 🚀 Using Turbo + Vue 3.5 + TypeScript, enjoy the latest features
+- 🎨 Integrated complete code specification configuration to ensure code quality
+- 📚 Using VitePress to build documentation, supporting enhanced Markdown syntax
+- 🔥 Component library supports on-demand import to reduce bundle size
+- 🎯 Complete type hints to improve development experience
+- 🛠️ Rich utility functions and Hooks to improve development efficiency
+- 🔄 Support hot updates to enhance development experience
+- ⚡️ Based on Vite build, ultimate development experience
 
-项目采用 Monorepo 架构，主要包含以下部分：
+## 📦 Project Structure
 
-- `packages/lint-configs`：包含所有配置相关的包，例如 ESLint、Prettier、Stylelint、Commitlint 和 TypeScript 配置。这些配置包确保代码风格的一致性和高质量。
-- `packages/hooks`：包含所有自定义 Hooks 的包。
-- `packages/utils`：包含所有工具函数的包。
-- `packages/ui`：包含所有 UI 组件的包。
-- `apps/docs`：文档应用，使用 Vitepress 构建，提供详尽的组件库文档和使用指南。
-- `playground`：演练场，用于测试和演示组件的示例应用，使用 Vite 构建。
+The project uses Monorepo architecture and mainly contains the following parts:
 
-此外，项目还包括自动化脚本和持续集成配置，以支持高效的开发流程和质量保证。
+- `packages/lint-configs`: Contains all configuration-related packages, such as ESLint, Prettier, Stylelint, Commitlint, and TypeScript configurations. These configuration packages ensure code style consistency and high quality.
+- `packages/hooks`: Contains all custom Hooks packages.
+- `packages/utils`: Contains all utility function packages.
+- `packages/ui`: Contains all UI component packages.
+- `apps/docs`: Documentation application, built with Vitepress, providing detailed component library documentation and usage guides.
+- `playground`: Playground for testing and demonstrating component examples, built with Vite.
 
-## 🚀 快速开始
+Additionally, the project includes automated scripts and continuous integration configurations to support efficient development processes and quality assurance.
+
+## 🚀 Quick Start
 
 ```bash
 pnpm install @mylib/ui @mylib/utils @mylib/hooks
 ```
 
-## 相关链接
+## Related Links
 
-> 部分代码和结构设计参考了[Vben5](https://github.com/vbenjs/vue-vben-admin)
+> Some code and structure design references [Vben5](https://github.com/vbenjs/vue-vben-admin)
 
 - [Vue 3](https://vuejs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -44,13 +46,13 @@ pnpm install @mylib/ui @mylib/utils @mylib/hooks
 - [Vite](https://vitejs.dev/)
 - [Vben-admin](https://github.com/vbenjs/vue-vben-admin)
 
-## 贡献指南
+## Contributing Guide
 
-1. Fork 本仓库
-2. 创建你的特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交你的改动 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开一个 Pull Request
+1. Fork this repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## License
 
