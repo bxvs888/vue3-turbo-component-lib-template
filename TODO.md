@@ -1,3 +1,3 @@
-- [ ] 添加 utils 包测试用例（jest或vitest）
+- [ ] 添加 utils 包测试用例（集成jest/vitest）
 - [ ] docs文档添加“更多-更新日志”,changeset管理
-- [ ] readme增加pkgjson命令解释、scripts解释
+- [ ] 添加Modal组件
