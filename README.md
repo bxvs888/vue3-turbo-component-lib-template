@@ -35,6 +35,14 @@ Additionally, the project includes automated scripts and continuous integration 
 pnpm install @mylib/ui @mylib/utils @mylib/hooks
 ```
 
+### document
+
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241135445.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241135191.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136925.png)
+
+### playground
+
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136535.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136209.png)
+
 ## Related Links
 
 > Some code and structure design references [Vben5](https://github.com/vbenjs/vue-vben-admin)

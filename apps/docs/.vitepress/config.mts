@@ -6,6 +6,10 @@ import path from 'node:path';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/vue3-turbo-component-lib-template/',
+  lang: 'zh-cn',
+  lastUpdated: true,
+  head: [['link', { rel: 'icon', href: '/vue3-turbo-component-lib-template/favicon.ico' }]],
   title: '组件库模板文档',
   description: '一个基于 Vue3 的组件库和工具集',
   themeConfig: {
@@ -15,7 +19,6 @@ export default defineConfig({
       // { text: '其他', link: '/markdown-examples' },
       { text: '博客', link: 'https://huangmingfu.github.io/my-blog' },
     ],
-
     sidebar: [
       {
         text: '快速开始',
@@ -34,7 +37,6 @@ export default defineConfig({
         items: [{ text: 'useCounter 计数器', link: '/packages/hooks/useCounter' }],
       },
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template' },
     ],

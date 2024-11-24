@@ -33,6 +33,14 @@
 pnpm install @mylib/ui @mylib/utils @mylib/hooks
 ```
 
+### apps/docs 文档
+
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241135445.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241135191.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136925.png)
+
+### playground 演练场
+
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136535.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136209.png)
+
 ## 相关链接
 
 > 部分代码和结构设计参考了[Vben5](https://github.com/vbenjs/vue-vben-admin)
