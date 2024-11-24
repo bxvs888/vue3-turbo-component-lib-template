@@ -7,7 +7,7 @@ This is a modern component library template based on `Turborepo + Vue 3.5 + Type
 ## ✨ Features
 
 - 📦 Based on Monorepo architecture for better code reuse and version management
-- 🚀 Using Turbo + Vue 3.5 + TypeScript, enjoy the latest features
+- 🚀 Using Turbo + Vue 3.5 + TypeScript, enjoy the latest technology features
 - 🎨 Integrated complete code specification configuration to ensure code quality
 - 📚 Using VitePress to build documentation, supporting enhanced Markdown syntax
 - 🔥 Component library supports on-demand import to reduce bundle size
@@ -15,6 +15,7 @@ This is a modern component library template based on `Turborepo + Vue 3.5 + Type
 - 🛠️ Rich utility functions and Hooks to improve development efficiency
 - 🔄 Support hot updates to enhance development experience
 - ⚡️ Based on Vite build, ultimate development experience
+- 🚚 ESM and CJS products
 
 ## 📦 Project Structure
 

@@ -1,2 +1,2 @@
 - [ ] 添加 utils 包测试用例（jest或vitest）
-- [ ] docs文档添加“更多-更新日志”
+- [ ] docs文档添加“更多-更新日志”,changeset管理
