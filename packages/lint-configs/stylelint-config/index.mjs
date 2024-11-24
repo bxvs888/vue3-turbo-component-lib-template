@@ -1,3 +1,4 @@
+/** @type {import("stylelint").Config} */
 export default {
   // 继承的配置
   extends: [

@@ -1,6 +1,7 @@
 // 导入 eslint 配置定义工具
 import { defineConfig } from 'eslint-define-config';
 
+/** @type {import("eslint").Config} */
 export default defineConfig({
   // 指定环境
   env: {

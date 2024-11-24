@@ -1,3 +1,4 @@
+/** @type {import("@commitlint/types").UserConfig} */
 export default {
   extends: ['@commitlint/config-conventional'], // 继承自 commitlint 的标准配置
   rules: {
