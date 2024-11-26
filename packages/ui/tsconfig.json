@@ -3,6 +3,8 @@
   "compilerOptions": {
     "declaration": true,
     "declarationDir": "es",
+    // 移除 .d.ts.map 文件映射
+    "declarationMap": false,
     "jsx": "preserve",
     "lib": ["ES2018", "DOM", "DOM.Iterable"],
     "types": ["node", "vite/client"],

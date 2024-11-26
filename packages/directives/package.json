@@ -1,7 +1,7 @@
 {
-  "name": "@mylib/hooks",
+  "name": "@mylib/directives",
   "version": "0.0.1",
-  "description": "@mylib hooks library",
+  "description": "@mylib directives library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -12,16 +12,13 @@
     "build": "rm -rf dist && rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
-  "dependencies": {
-    "vue": "^3.5.13"
-  },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-typescript": "^12.1.1",
     "@mylib/typescript-config": "workspace:*",
-    "rollup": "^4.27.3",
-    "tslib": "^2.8.1",
-    "typescript": "^5.6.3"
+    "rollup": "^4.27.4",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "typescript": "^5.7.2",
+    "vue": "^3.5.13"
   },
   "peerDependencies": {
     "vue": "^3.5.13"

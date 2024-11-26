@@ -59,18 +59,6 @@ app.mount('#app');
   - 支持加载状态
   - 支持图标按钮
 
-### 表单组件
-
-- Input 输入框 (开发中)
-- Select 选择器 (开发中)
-- Radio 单选框 (开发中)
-- Checkbox 复选框 (开发中)
-
-### 数据展示
-
-- Table 表格 (开发中)
-- Tree 树形控件 (开发中)
-
 ### 反馈组件
 
 - Message 消息提示 (开发中)
@@ -78,4 +66,4 @@ app.mount('#app');
 
 ## 目录结构
 
-packages/ui/ ├── src/ │ ├── components/ # 组件源码 │ ├── \_utils/ # 组件内部使用的相关工具函数 │ └── index.ts # 入口文件 ├── dist/ # 构建输出目录 ├── types/ # 类型声明文件 └── package.json
+packages/ui/ ├── src/ # 组件源码 │ ├── components/ # 组件 │ ├── \_utils/ # 组件内部使用的相关工具函数 │ └── index.ts # 入口文件 ├── dist/ # 构建输出目录 ├── types/ # 类型声明文件 └── package.json # 包配置文件
