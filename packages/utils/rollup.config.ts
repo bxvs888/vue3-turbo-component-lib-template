@@ -34,12 +34,6 @@ export default defineConfig({
     typescript({
       // 指定 tsconfig 文件
       tsconfig: './tsconfig.json',
-      // 声明文件输出目录
-      declarationDir: './dist',
-      // 输出目录
-      outDir: './dist',
-      // 生成声明文件
-      declaration: true,
     }),
   ],
 });

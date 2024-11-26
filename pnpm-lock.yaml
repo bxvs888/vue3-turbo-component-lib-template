@@ -96,6 +96,9 @@ importers:
 
   packages/directives:
     devDependencies:
+      '@mylib/typescript-config':
+        specifier: workspace:*
+        version: link:../lint-configs/typescript-config
       '@rollup/plugin-terser':
         specifier: ^0.4.4
         version: 0.4.4(rollup@4.27.4)

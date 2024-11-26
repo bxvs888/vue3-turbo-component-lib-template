@@ -30,7 +30,5 @@
     "skipLibCheck": true,
     // 启用所有严格的类型检查选项
     "strict": true
-  },
-  // 排除编译的文件和目录
-  "exclude": ["node_modules", "dist"]
+  }
 }

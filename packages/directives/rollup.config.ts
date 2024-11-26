@@ -22,6 +22,6 @@ export default {
     }),
     resolve(),
     commonjs(),
-    // terser(), // 压缩输出
+    terser(), // 压缩输出（体积减小了，但是不方便查看打包后的代码来排查问题）
   ],
 };

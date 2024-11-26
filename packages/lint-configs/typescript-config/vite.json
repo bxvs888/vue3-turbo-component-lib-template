@@ -10,6 +10,8 @@
     "module": "ESNext",
     // 包含的库文件
     "lib": ["ESNext", "DOM"],
+    // 指定类型定义文件
+    "types": ["node", "vite/client"],
     // 生成源映射文件
     "sourceMap": true,
     // 允许导入 JSON 模块
@@ -22,7 +24,5 @@
     "noUnusedParameters": true,
     // 检查函数是否有隐式返回
     "noImplicitReturns": true
-  },
-  // 排除编译的文件和目录
-  "exclude": ["node_modules", "dist"]
+  }
 }

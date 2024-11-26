@@ -4,12 +4,6 @@
   // 包含的文件路径
   "include": ["src/**/*.ts", "src/**/*.d.ts"],
   "compilerOptions": {
-    // 基础 URL，用于解析非相对模块名称
-    "baseUrl": ".",
-    // 路径映射，用于简化模块导入
-    "paths": {
-      "@/*": ["src/*"]
-    },
     // 生成声明文件
     "declaration": true,
     // 声明文件输出目录
