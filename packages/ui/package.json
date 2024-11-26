@@ -19,6 +19,7 @@
     "dist"
   ],
   "scripts": {
+    "dev": "vite build --watch",
     "build": "rm -rf dist && vite build",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },

@@ -10,6 +10,7 @@
   "workbench.editor.limit.value": 5,
 
   // editor
+  "editor.formatOnSave": true, // 保存的时候自动格式化
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "editor.cursorBlinking": "expand",

@@ -29,11 +29,6 @@ export default defineConfig({
         filePath: filePath.replace('/src/', '/'),
         content,
       }),
-      // TypeScript 编译选项
-      compilerOptions: {
-        // 不生成复合项目
-        composite: false,
-      },
     }),
   ],
   // 构建配置
