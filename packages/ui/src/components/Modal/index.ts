@@ -1,4 +1,4 @@
-import { withInstall } from '@/_utils';
+import { withInstall } from '~/_utils';
 import Modal from './Modal.vue';
 
 export const VModal = withInstall(Modal);

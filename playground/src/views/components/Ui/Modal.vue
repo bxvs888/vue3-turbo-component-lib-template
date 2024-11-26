@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { VModal } from '@mylib/ui';
+import { VModal } from 'mylib/ui';
 import { ref } from 'vue';
 console.log(VModal);
 const open = ref(false);
