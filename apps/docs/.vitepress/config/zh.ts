@@ -18,7 +18,10 @@ export const zh = defineConfig({
       },
       {
         text: '组件（@mylib/ui）',
-        items: [{ text: 'Button 按钮', link: '/packages/ui/button' }],
+        items: [
+          { text: 'Button 按钮', link: '/packages/ui/button' },
+          { text: 'Dialog 对话框', link: '/packages/ui/dialog' },
+        ],
       },
       {
         text: '工具函数（@mylib/utils）',

@@ -62,7 +62,7 @@ app.mount('#app');
 ### 反馈组件
 
 - Message 消息提示 (开发中)
-- Modal 对话框 (开发中)
+- Dialog 对话框 (开发中)
 
 ## 目录结构
 

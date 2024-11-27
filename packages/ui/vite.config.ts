@@ -5,7 +5,6 @@ import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 // node
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 
 // 导出 Vite 配置
 export default defineConfig({
@@ -42,7 +41,7 @@ export default defineConfig({
     // 库配置
     lib: {
       // 入口文件
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(import.meta.dirname, 'src/index.ts'),
       // 输出格式
       formats: ['es', 'cjs'],
       // 输出文件名

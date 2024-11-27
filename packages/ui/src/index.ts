@@ -1,7 +1,7 @@
-import type { App } from '@vue/runtime-core';
-import { VButton, VModal } from './components';
+import type { App } from 'vue';
+import { VButton, VDialog } from './components';
 
-const components = [VButton, VModal];
+const components = [VButton, VDialog];
 
 function install(app: App) {
   components.forEach((component) => {
@@ -9,7 +9,7 @@ function install(app: App) {
   });
 }
 
-export { VButton, VModal, install };
+export { VButton, VDialog, install };
 
 export default {
   install,

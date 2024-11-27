@@ -18,7 +18,10 @@ export const en = defineConfig({
       },
       {
         text: 'Components (@mylib/ui)',
-        items: [{ text: 'Button', link: 'en/packages/ui/button' }],
+        items: [
+          { text: 'Button', link: 'en/packages/ui/button' },
+          { text: 'Dialog', link: 'en/packages/ui/dialog' },
+        ],
       },
       {
         text: 'Utilities (@mylib/utils)',
