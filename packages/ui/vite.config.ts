@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue';
 import dts from 'vite-plugin-dts';
 // node
 import path from 'node:path';
+import fs from 'node:fs';
 
 // 导出 Vite 配置
 export default defineConfig({
@@ -14,9 +15,7 @@ export default defineConfig({
     },
   },
   plugins: [
-    // 使用 Vue 插件
     vue(),
-    // 使用 TypeScript 声明文件插件
     dts({
       // 包含的文件类型
       include: ['src/**/*.ts', 'src/**/*.vue'],
@@ -29,8 +28,16 @@ export default defineConfig({
         content,
       }),
     }),
+    {
+      name: 'copy-global-dts',
+      closeBundle() {
+        // 复制文件global.d.ts到dist里
+        const srcPath = path.resolve(import.meta.dirname, 'src/types/global.d.ts');
+        const destPath = path.resolve(import.meta.dirname, 'dist/global.d.ts');
+        fs.copyFileSync(srcPath, destPath);
+      },
+    },
   ],
-  // 构建配置
   build: {
     // 目标环境
     target: 'modules',
@@ -50,7 +57,6 @@ export default defineConfig({
       // CSS 输出文件名
       cssFileName: `style`,
     },
-    // Rollup 选项
     rollupOptions: {
       // 外部依赖
       external: ['vue'],

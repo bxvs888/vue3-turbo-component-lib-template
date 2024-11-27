@@ -37,11 +37,14 @@ bun add @mylib/ui @mylib/utils @mylib/hooks
 ### UI 组件
 
 ```ts
+// 全局引入
 import { createApp } from 'vue';
 import UI from '@mylib/ui';
 import '@mylib/ui/style.css';
 const app = createApp(App);
 app.use(UI);
+//  tsconfig.json还需要添加以下配置以获得类型提示：
+//  "types": ["@mylib/ui/global.d.ts"]
 
 // 按需引入
 import { Button } from '@mylib/ui';

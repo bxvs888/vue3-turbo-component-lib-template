@@ -37,15 +37,18 @@ bun add @mylib/ui @mylib/utils @mylib/hooks
 ### UI Components
 
 ```ts
+// Global import
 import { createApp } from 'vue';
 import UI from '@mylib/ui';
-import '@mylib/ui/dist/style.css';
+import '@mylib/ui/style.css';
 const app = createApp(App);
 app.use(UI);
+// You also need to add the following configuration in tsconfig.json to get type hints:
+// "types": ["@mylib/ui/global.d.ts"]
 
 // On-demand import
 import { Button } from '@mylib/ui';
-import '@mylib/ui/dist/style.css';
+import '@mylib/ui/style.css';
 const app = createApp(App);
 app.use(Button);
 ```

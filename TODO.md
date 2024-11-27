@@ -1,3 +1,2 @@
-- [ ] 修复ui组件类型提示问题
 - [ ] 添加 utils 包测试用例（集成jest/vitest）
 - [ ] docs文档添加“更多-更新日志”,changeset管理

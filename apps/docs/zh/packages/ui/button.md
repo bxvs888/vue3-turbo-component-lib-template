@@ -11,5 +11,4 @@
 | type     | 按钮类型 | 'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' | ''       |
 | size     | 按钮大小 | 'small' \| 'medium' \| 'large'                            | 'medium' |
 | disabled | 是否禁用 | boolean                                                   | false    |
-| plain    | 是否朴素 | boolean                                                   | false    |
 | round    | 是否圆角 | boolean                                                   | false    |

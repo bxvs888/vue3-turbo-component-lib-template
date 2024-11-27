@@ -1,5 +1,6 @@
 <template>
   <a-space>
+    <!-- 全局引入，node_modules -->
     <VButton>按钮</VButton>
     <VButton type="primary">按钮</VButton>
     <VButton type="success">按钮</VButton>
@@ -10,6 +11,6 @@
 </template>
 
 <script setup lang="ts">
-import { VButton } from 'mylib/ui'; // 本地调试
+// import { VButton } from 'mylib/ui'; // 本地调试
 // import { VButton } from '@mylib/ui'; // 从node_modules/@mylib/ui/dist/es里面引入
 </script>
