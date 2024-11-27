@@ -10,6 +10,6 @@
 </template>
 
 <script setup lang="ts">
-// import { VButton } from 'mylib/ui';
-import { VButton } from '@mylib/ui';
+import { VButton } from 'mylib/ui'; // 本地调试
+// import { VButton } from '@mylib/ui'; // 从node_modules/@mylib/ui/dist/es里面引入
 </script>

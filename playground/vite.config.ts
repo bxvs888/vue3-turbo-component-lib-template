@@ -6,9 +6,10 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './src'),
-      '~': resolve(__dirname, '../packages/ui/src'),
-      'mylib/ui': resolve(__dirname, '../packages/ui/src'),
+      '@': resolve(import.meta.dirname, './src'),
+      // 本地UI库，ui组件修改实时变化
+      'mylib/ui': resolve(import.meta.dirname, '../packages/ui/src'),
+      '~': resolve(import.meta.dirname, '../packages/ui/src'),
     },
   },
   server: {
