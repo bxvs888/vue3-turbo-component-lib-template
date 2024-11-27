@@ -24,12 +24,16 @@ export const zh = defineConfig({
         ],
       },
       {
-        text: '工具函数（@mylib/utils）',
-        items: [{ text: '字符串工具', link: '/packages/utils/string' }],
-      },
-      {
         text: 'Hooks（@mylib/hooks）',
         items: [{ text: 'useCounter 计数器', link: '/packages/hooks/useCounter' }],
+      },
+      {
+        text: '指令（@mylib/directives）',
+        items: [{ text: 'vFocus 聚焦', link: '/packages/directives/vFocus' }],
+      },
+      {
+        text: '工具函数（@mylib/utils）',
+        items: [{ text: '字符串工具', link: '/packages/utils/string' }],
       },
     ],
     socialLinks: [

@@ -11,7 +11,7 @@
 import { ref } from 'vue';
 
 interface Props {
-  name: 'utils' | 'ui' | 'hooks';
+  name: string;
 }
 
 const props = defineProps<Props>();

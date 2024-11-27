@@ -24,12 +24,16 @@ export const en = defineConfig({
         ],
       },
       {
-        text: 'Utilities (@mylib/utils)',
-        items: [{ text: 'String Utils', link: 'en/packages/utils/string' }],
-      },
-      {
         text: 'Hooks (@mylib/hooks)',
         items: [{ text: 'useCounter', link: 'en/packages/hooks/useCounter' }],
+      },
+      {
+        text: 'Directives (@mylib/directives)',
+        items: [{ text: 'vFocus', link: 'en/packages/directives/vFocus' }],
+      },
+      {
+        text: 'Utilities (@mylib/utils)',
+        items: [{ text: 'String Utils', link: 'en/packages/utils/string' }],
       },
     ],
     socialLinks: [

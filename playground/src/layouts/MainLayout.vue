@@ -1,25 +1,13 @@
 <template>
   <a-layout style="min-height: 100vh">
     <a-layout-sider v-model:collapsed="collapsed" collapsible>
-      <div class="logo" />
+      <div class="logo"></div>
       <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline" @select="onMenuSelect">
-        <a-menu-item key="ui">
+        <a-menu-item v-for="route in routes" :key="route.path">
           <template #icon>
-            <CommentOutlined />
+            <component :is="route.meta?.icon" />
           </template>
-          <span>UI 组件</span>
-        </a-menu-item>
-        <a-menu-item key="hooks">
-          <template #icon>
-            <experiment-outlined />
-          </template>
-          <span>Hooks</span>
-        </a-menu-item>
-        <a-menu-item key="utils">
-          <template #icon>
-            <tool-outlined />
-          </template>
-          <span>Utils</span>
+          <span>{{ route.meta?.title }}</span>
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
@@ -39,30 +27,31 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
-import { CommentOutlined, ExperimentOutlined, ToolOutlined } from '@ant-design/icons-vue';
+import { routes } from '@/router';
 
 const collapsed = ref<boolean>(false);
-const selectedKeys = ref<string[]>(['ui']);
+const selectedKeys = ref<string[]>(['/ui']);
 const router = useRouter();
 
 const pageTitle = computed(() => {
-  const titles: Record<string, string> = {
-    ui: 'UI 组件展示',
-    hooks: 'Hooks 示例',
-    utils: '工具函数演示',
-  };
-  return titles[selectedKeys.value[0]] || '';
+  return routes.filter((item) => item.path == selectedKeys.value[0]).pop()?.meta?.title + '演示';
 });
 
 const onMenuSelect = ({ key }: { key: string }) => {
-  router.push(`/${key}`);
+  router.push(key);
 };
 </script>
 
 <style scoped>
 .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 32px;
   margin: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
   background: rgb(255 255 255 / 30%);
 }
 </style>

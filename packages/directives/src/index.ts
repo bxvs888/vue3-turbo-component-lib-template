@@ -1,9 +1,9 @@
-import focus from './v-focus';
+import vFocus from './v-focus';
 
-export { focus };
+export { vFocus };
 
 const directives = {
-  focus,
+  vFocus,
 };
 
 export default directives;
