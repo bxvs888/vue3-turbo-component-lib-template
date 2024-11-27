@@ -19,10 +19,10 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue-jsx": "^4.1.0",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
     "sass": "^1.81.0",
-    "typescript": "^5.6.3",
+    "typescript": "^5.7.2",
     "vitepress": "^1.5.0",
-    "vitepress-demo-plugin": "^1.1.2"
+    "vitepress-demo-plugin": "^1.1.3"
   }
 }

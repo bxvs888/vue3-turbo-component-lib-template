@@ -13,7 +13,7 @@
       "import": "./dist/es/index.mjs",
       "require": "./dist/lib/index.js"
     },
-    "./dist/styles/*": "./dist/styles/*"
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "dist"
@@ -24,13 +24,13 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@types/node": "^22.9.1",
-    "@vitejs/plugin-vue": "^5.2.0",
-    "@vue/runtime-core": "^3.5.13",
     "@mylib/typescript-config": "workspace:*",
+    "@types/node": "^22.10.0",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/runtime-core": "^3.5.13",
     "sass": "^1.81.0",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.11",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
     "vite-plugin-dts": "^4.3.0",
     "vue": "^3.5.13"
   },

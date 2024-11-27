@@ -48,6 +48,8 @@ export default defineConfig({
       // 输出文件名
       fileName: (format) =>
         `${format === 'es' ? 'es' : 'lib'}/index.${format === 'es' ? 'mjs' : 'js'}`,
+      // CSS 输出文件名
+      cssFileName: `style`,
     },
     // Rollup 选项
     rollupOptions: {
@@ -57,15 +59,6 @@ export default defineConfig({
       output: {
         // 导出方式
         exports: 'named',
-        // 资产文件名配置
-        assetFileNames: (assetInfo) => {
-          // 如果是样式文件
-          if (assetInfo.name === 'style.css') {
-            return 'styles/index.css';
-          }
-          // 返回其他文件名
-          return assetInfo.name!;
-        },
       },
     },
   },

@@ -12,9 +12,8 @@ export default {
   arrowParens: 'always', // 箭头函数参数是否总是使用括号
   insertPragma: false, // 是否在文件顶部插入@format注释
   requirePragma: false, // 是否仅在文件中有@format注释时才格式化
-  proseWrap: 'never', // 长文本是否自动换行
   htmlWhitespaceSensitivity: 'strict', // HTML中的空白字符敏感度
   endOfLine: 'auto', // 文件末尾的换行符，自动识别系统
   rangeStart: 0, // 格式化的起始位置
-  proseWrap: 'never', // md文件不自动换行,即使段落文本超过了 printWidth 设置的最大宽度
+  proseWrap: 'preserve', // md文件不自动换行,即使段落文本超过了 printWidth 设置的最大宽度
 };

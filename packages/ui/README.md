@@ -28,7 +28,7 @@ pnpm add @mylib/ui
 // main.ts
 import { createApp } from 'vue';
 import VUI from '@mylib/ui';
-import '@mylib/ui/dist/style.css';
+import '@mylib/ui/style.css';
 import App from './App.vue';
 const app = createApp(App);
 app.use(VUI);
@@ -41,7 +41,7 @@ app.mount('#app');
 // main.ts
 import { createApp } from 'vue';
 import { Button } from '@mylib/ui';
-import '@mylib/ui/dist/style.css';
+import '@mylib/ui/style.css';
 import App from './App.vue';
 const app = createApp(App);
 app.use(Button);
@@ -66,4 +66,11 @@ app.mount('#app');
 
 ## 目录结构
 
-packages/ui/ ├── src/ # 组件源码 │ ├── components/ # 组件 │ ├── \_utils/ # 组件内部使用的相关工具函数 │ └── index.ts # 入口文件 ├── dist/ # 构建输出目录 ├── types/ # 类型声明文件 └── package.json # 包配置文件
+packages/ui/
+├── src/ # 组件源码
+│ ├── components/ # 组件
+│ ├── \_utils/ # 组件内部使用的相关工具函数
+│ └── index.ts # 入口文件
+├── dist/ # 构建输出目录
+├── types/ # 类型声明文件
+└── package.json # 包配置文件

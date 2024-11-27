@@ -39,13 +39,13 @@ bun add @mylib/ui @mylib/utils @mylib/hooks
 ```ts
 import { createApp } from 'vue';
 import UI from '@mylib/ui';
-import '@mylib/ui/dist/styles/index.css';
+import '@mylib/ui/style.css';
 const app = createApp(App);
 app.use(UI);
 
 // 按需引入
 import { Button } from '@mylib/ui';
-import '@mylib/ui/dist/styles/index.css';
+import '@mylib/ui/style.css';
 const app = createApp(App);
 app.use(Button);
 ```
