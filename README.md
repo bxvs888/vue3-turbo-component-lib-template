@@ -60,11 +60,14 @@ pnpm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 
 > Equipped with international language switching
 
-![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241135445.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241135191.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136925.png)
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271628842.png)
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271629728.png)
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271629672.png)
 
 ### playground
 
-![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136535.png) ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411241136209.png)
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271630381.png)
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271631563.png)
 
 ## Related Links
 
