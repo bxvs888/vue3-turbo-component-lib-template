@@ -2,32 +2,33 @@
 
 ## Introduction
 
-mylib-template is a Vue3-based component library and utility template project, including the following parts:
+mylib-template is a component library and toolkit template project based on Vue3, consisting of the following parts:
 
 - UI Component Library: Provides commonly used UI components
-- Utility Functions: Provides commonly used utility functions
-- Hooks: Provides reusable composition functions
+- Utility Functions: Offers common utility functions
+- Hooks: Provides reusable composable functions
+- Directives: Offers commonly used directives
 
 ## Installation
 
-Install using package manager:
+Install using a package manager:
 
 ::: code-group
 
 ```bash [npm]
-npm install @mylib/ui @mylib/utils @mylib/hooks
+npm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ```bash [yarn]
-yarn add @mylib/ui @mylib/utils @mylib/hooks
+yarn add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ```bash [pnpm]
-pnpm add @mylib/ui @mylib/utils @mylib/hooks
+pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ```bash [bun]
-bun add @mylib/ui @mylib/utils @mylib/hooks
+bun add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 :::
@@ -43,10 +44,10 @@ import UI from '@mylib/ui';
 import '@mylib/ui/style.css';
 const app = createApp(App);
 app.use(UI);
-// You also need to add the following configuration in tsconfig.json to get type hints:
+// Additionally, add the following configuration to tsconfig.json for type hints:
 // "types": ["@mylib/ui/global.d.ts"]
 
-// On-demand import
+// Import on demand
 import { Button } from '@mylib/ui';
 import '@mylib/ui/style.css';
 const app = createApp(App);
@@ -65,4 +66,16 @@ console.log(isString('hello')); // true
 ```ts
 import { useCounter } from '@mylib/hooks';
 const { count, increment, decrement } = useCounter();
+```
+
+### Directives
+
+```ts
+import { vFocus } from '@mylib/directives';
+// Global import
+app.directive('focus', vFocus);
+
+// Import on demand
+import { vFocus } from '@mylib/directives';
+app.directive('focus', vFocus);
 ```

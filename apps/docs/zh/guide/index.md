@@ -7,6 +7,7 @@ mylib-template 是一个基于 Vue3 的组件库和工具集模板项目，包�
 - UI 组件库：提供常用的 UI 组件
 - 工具函数：提供常用的工具函数
 - Hooks：提供可复用的组合式函数
+- Directives：提供常用的指令
 
 ## 安装
 
@@ -15,19 +16,19 @@ mylib-template 是一个基于 Vue3 的组件库和工具集模板项目，包�
 ::: code-group
 
 ```bash [npm]
-npm install @mylib/ui @mylib/utils @mylib/hooks
+npm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ```bash [yarn]
-yarn add @mylib/ui @mylib/utils @mylib/hooks
+yarn add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ```bash [pnpm]
-pnpm add @mylib/ui @mylib/utils @mylib/hooks
+pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ```bash [bun]
-bun add @mylib/ui @mylib/utils @mylib/hooks
+bun add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 :::
@@ -65,4 +66,16 @@ console.log(isString('hello')); // true
 ```ts
 import { useCounter } from '@mylib/hooks';
 const { count, increment, decrement } = useCounter();
+```
+
+### 指令
+
+```ts
+import { vFocus } from '@mylib/directives';
+// 全局引入
+app.directive('focus', vFocus);
+
+// 按需引入
+import { vFocus } from '@mylib/directives';
+app.directive('focus', vFocus);
 ```

@@ -1,5 +1,5 @@
 <template>
-  <input type="text" v-focus />
+  <input type="text" v-focus value="123" />
 </template>
 
 <script setup lang="ts">

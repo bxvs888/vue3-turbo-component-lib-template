@@ -21,6 +21,7 @@
 
 - `packages/lint-configs`：包含所有配置相关的包，例如 ESLint、Prettier、Stylelint、Commitlint 和 TypeScript 配置。这些配置包确保代码风格的一致性和高质量。
 - `packages/hooks`：包含所有自定义 Hooks 的包。
+- `packages/directives`：包含所有指令的包。
 - `packages/utils`：包含所有工具函数的包。
 - `packages/ui`：包含所有 UI 组件的包。
 - `apps/docs`：文档应用，使用 Vitepress 构建，提供详尽的组件库文档和使用指南。
@@ -50,7 +51,7 @@
 
 ```bash
 # @mylib可以通过rename-pkg命令，一键更改为属于自己的包名，如@vue3-lib
-pnpm install @mylib/ui @mylib/utils @mylib/hooks
+pnpm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ### apps/docs 文档

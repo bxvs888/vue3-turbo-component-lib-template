@@ -23,6 +23,7 @@ The project uses Monorepo architecture and mainly contains the following parts:
 
 - `packages/lint-configs`: Contains all configuration-related packages, such as ESLint, Prettier, Stylelint, Commitlint, and TypeScript configurations. These configuration packages ensure code style consistency and high quality.
 - `packages/hooks`: Contains all custom Hooks packages.
+- `packages/directives`：Contains all directive packages。
 - `packages/utils`: Contains all utility function packages.
 - `packages/ui`: Contains all UI component packages.
 - `apps/docs`: Documentation application, built with Vitepress, providing detailed component library documentation and usage guides.
@@ -52,7 +53,7 @@ Additionally, the project includes automated scripts and continuous integration 
 
 ```bash
 # @mylib can be changed to your own package name in one command using rename-pkg, e.g., @vue3-lib
-pnpm install @mylib/ui @mylib/utils @mylib/hooks
+pnpm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ### document
