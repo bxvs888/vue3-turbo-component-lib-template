@@ -9,7 +9,9 @@ function install(app: App) {
   });
 }
 
-export { VButton, VDialog, install };
+export { install };
+
+export * from './components';
 
 export default {
   install,

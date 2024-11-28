@@ -12,5 +12,10 @@
 
 <script setup lang="ts">
 // import { VButton } from 'mylib/ui'; // 本地调试
-// import { VButton } from '@mylib/ui'; // 从node_modules/@mylib/ui/dist/es里面引入
+import { VButton } from '@mylib/ui'; // 从node_modules/@mylib/ui/dist/es里面引入
+// 导出类型测试
+// import type { ButtonProps } from '@mylib/ui';
+// const buttonProps: ButtonProps = {
+//   type: 'primary',
+// };
 </script>

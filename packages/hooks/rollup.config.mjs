@@ -1,9 +1,6 @@
-// 导入 TypeScript 插件
 import typescript from '@rollup/plugin-typescript';
-// 导入 Node 解析插件
-import { nodeResolve } from '@rollup/plugin-node-resolve';
 
-// 导出 Rollup 配置
+/** @type {import('rollup').RollupOptions} */
 export default {
   // 输入文件
   input: 'src/index.ts',
@@ -20,16 +17,10 @@ export default {
       format: 'es',
     },
   ],
-  // 插件配置
   plugins: [
-    // 解析 Node 模块
-    nodeResolve(),
-    // TypeScript 插件配置
     typescript({
-      // 指定 tsconfig 文件
       tsconfig: './tsconfig.json',
     }),
   ],
-  // 排除外部依赖，避免重复打包
   external: ['vue'],
 };

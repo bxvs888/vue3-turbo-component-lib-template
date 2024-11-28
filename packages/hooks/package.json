@@ -9,7 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "rm -rf dist && rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "build": "rm -rf dist && rollup -c rollup.config.mjs",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
@@ -17,10 +17,8 @@
   },
   "devDependencies": {
     "@mylib/typescript-config": "workspace:*",
-    "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-typescript": "^12.1.1",
     "rollup": "^4.27.4",
-    "tslib": "^2.8.1",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
