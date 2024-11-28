@@ -14,7 +14,7 @@ export const routes: RouteRecordRaw[] = [
       title: 'UI 组件',
       icon: CommentOutlined,
     },
-    component: () => import('@/views/Ui.vue'),
+    component: () => import('@/layouts/container/Ui.vue'),
   },
   {
     path: '/hooks',
@@ -23,7 +23,7 @@ export const routes: RouteRecordRaw[] = [
       title: 'Hooks',
       icon: ExperimentOutlined,
     },
-    component: () => import('@/views/Hooks.vue'),
+    component: () => import('@/layouts/container/Hooks.vue'),
   },
   {
     path: '/directives',
@@ -32,7 +32,7 @@ export const routes: RouteRecordRaw[] = [
       title: 'Directives',
       icon: SettingOutlined,
     },
-    component: () => import('@/views/Directives.vue'),
+    component: () => import('@/layouts/container/Directives.vue'),
   },
   {
     path: '/utils',
@@ -41,7 +41,7 @@ export const routes: RouteRecordRaw[] = [
       title: 'Utils',
       icon: ToolOutlined,
     },
-    component: () => import('@/views/Utils.vue'),
+    component: () => import('@/layouts/container/Utils.vue'),
   },
 ];
 
@@ -51,7 +51,17 @@ const router = createRouter({
     {
       path: '/',
       component: () => import('@/layouts/MainLayout.vue'),
-      children: [...routes],
+      children: [
+        {
+          path: '',
+          redirect: '/ui',
+        },
+        ...routes,
+      ],
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/ui',
     },
   ],
 });

@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
-// 导入 Vue 插件
 import vue from '@vitejs/plugin-vue';
+import vueJsx from '@vitejs/plugin-vue-jsx';
 // 导入 TypeScript 声明文件插件
 import dts from 'vite-plugin-dts';
 // node
@@ -16,6 +16,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    vueJsx(),
     dts({
       // 包含的文件类型
       include: ['src/**/*.ts', 'src/**/*.vue'],

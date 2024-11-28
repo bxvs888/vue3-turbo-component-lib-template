@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-import TabsView from '@/layouts/TabsView.vue';
+import TabsView from '../TabsView.vue';
 </script>

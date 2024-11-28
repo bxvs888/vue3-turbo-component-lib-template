@@ -17,14 +17,14 @@ interface Props {
 const props = defineProps<Props>();
 const activeKey = ref(0);
 
-const components = import.meta.glob('../views/components/**/**.vue', {
+const components = import.meta.glob('../views/**/**.vue', {
   eager: true,
   import: 'default',
 });
 
 const renderCmp = Object.entries(components)
   .filter(([path]) =>
-    path.includes(`/components/${props.name.charAt(0).toUpperCase() + props.name.slice(1)}/`),
+    path.includes(`/${props.name.charAt(0).toUpperCase() + props.name.slice(1)}/`),
   )
   .map(([path, component], index) => {
     const name = path.match(/[^/]+(?=\.vue$)/)?.[0] || 'error';
