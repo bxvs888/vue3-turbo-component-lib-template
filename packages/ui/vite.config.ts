@@ -40,12 +40,10 @@ export default defineConfig({
     },
   ],
   build: {
-    // 目标环境
-    target: 'modules',
-    // 输出目录
-    outDir: 'dist',
-    // 清空输出目录
-    emptyOutDir: true,
+    target: 'modules', // 目标环境
+    outDir: 'dist', // 输出目录
+    emptyOutDir: true, // 清空输出目录
+    minify: false, // 禁用最小化混淆，默认为esbuild
     // 库配置
     lib: {
       // 入口文件
