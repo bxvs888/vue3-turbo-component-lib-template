@@ -13,12 +13,14 @@
   },
   "bugs": "https://github.com/huangmingfu/vue3-turbo-component-lib-template/issues",
   "keywords": [
-    "component-template",
-    "component-lib",
+    "component library template",
+    "component library",
+    "ui framework",
+    "ui",
     "turborepo",
     "monorepo",
-    "vue3-typescript",
-    "vite5",
+    "vue3 typescript",
+    "vite6",
     "turbo"
   ],
   "scripts": {
