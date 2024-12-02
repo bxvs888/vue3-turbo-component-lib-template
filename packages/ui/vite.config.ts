@@ -43,7 +43,7 @@ export default defineConfig({
     target: 'modules', // 目标环境
     outDir: 'dist', // 输出目录
     emptyOutDir: true, // 清空输出目录
-    minify: false, // 禁用最小化混淆，默认为esbuild
+    minify: false, // 方便查看打包后的代码（排查问题），禁用最小化混淆，默认为esbuild
     // 库配置
     lib: {
       // 入口文件

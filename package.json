@@ -3,7 +3,7 @@
   "description": "This is a modern component library template based on Turborepo+Vue 3.5+TypeScript.",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@9.14.2",
   "author": "huangmingfu <212149997@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/huangmingfu/vue3-turbo-component-lib-template",
