@@ -3,3 +3,4 @@ packages:
   - 'packages/*'
   - 'packages/lint-configs/*'
   - 'playground'
+  - 'build'

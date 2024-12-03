@@ -29,6 +29,7 @@
     "dev:play": "pnpm -F @mylib/playground run dev",
     "build": "turbo run build",
     "build:docs": "pnpm -F @mylib/docs run build",
+    "build:gulp": "gulp -f build/gulpfile.cjs",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean",
