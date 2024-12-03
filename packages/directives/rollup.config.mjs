@@ -13,6 +13,14 @@ export default {
       file: 'dist/index.mjs',
       format: 'es',
     },
+    // 打包出压缩后的文件
+    // {
+    //   dir: 'dist',
+    //   entryFileNames: 'index.min.mjs',
+    //   file: `dist/index${minify ? '.min' : ''}.js`, // dir+entryFileNames
+    //   format: 'esm',
+    //   plugins: [minify && terser()],
+    // },
   ],
   plugins: [
     typescript({

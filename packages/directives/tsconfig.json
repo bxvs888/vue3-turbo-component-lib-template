@@ -1,16 +1,9 @@
 {
-  // 继承自 @mylib/typescript-config/base.json 的配置
-  "extends": "@mylib/typescript-config/base.json",
-  // 包含的文件路径
+  "extends": "@mylib/typescript-config/build.json",
+  // 以下都是不能继承的配置，需要单独配置
   "include": ["src/**/*.ts", "src/**/*.d.ts"],
   "compilerOptions": {
-    // 生成声明文件
-    "declaration": true,
-    // 声明文件输出目录
-    "declarationDir": "./dist",
-    // 输出目录
     "outDir": "./dist",
-    // 移除 .d.ts.map 文件映射
-    "declarationMap": false
+    "declarationDir": "./dist"
   }
 }
