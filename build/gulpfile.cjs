@@ -38,8 +38,8 @@ gulp.task('utils', async function () {
 
 // 打包 UI 组件
 gulp.task('ui', async function () {
-  await bundle('ui');
+  // await bundle('ui');
 });
 
 // 默认任务，运行所有任务
-gulp.task('default', gulp.series('clean', gulp.parallel('hooks', 'directives', 'utils'))); // , 'ui'
+gulp.task('default', gulp.series('clean', gulp.parallel('hooks', 'directives', 'utils', 'ui')));

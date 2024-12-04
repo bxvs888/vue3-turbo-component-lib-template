@@ -7,45 +7,53 @@ const path = require('path');
 const packages = ['hooks', 'directives', 'utils'];
 const resolveFile = (...args) => path.resolve(__dirname, ...args);
 
-const createPlugins = (pkg, isESM = false) => [
-  nodeResolve({
-    extensions: ['.ts', '.js'],
-    moduleDirectories: ['node_modules', 'src'],
-  }),
-  typescript({
-    ...(isESM && {
-      tsconfig: resolveFile(`./tsconfig.json`),
-      declarationDir: resolveFile(`dist/${pkg}/es`),
-      include: [
-        resolveFile(`../packages/${pkg}/src/**/*.ts`),
-        resolveFile(`../packages/${pkg}/src/**/*.d.ts`),
-      ],
+/**
+ *
+ * @param {*} pkg // 包名
+ * @param {*} options.babel // 是否将现代 JavaScript 代码转换为向后兼容的版本
+ * @param {*} options.minify // 是否压缩
+ * @param {*} options.format // 输出格式
+ * @returns {Array} Plugins
+ */
+const createPlugins = (pkg, options = {}) =>
+  [
+    nodeResolve({
+      extensions: ['.ts', '.js'],
+      moduleDirectories: ['node_modules', 'src'],
     }),
-    ...(!isESM && { declaration: false }),
-  }),
-  babel({
-    babelHelpers: 'bundled',
-    presets: ['@babel/preset-env', '@babel/preset-typescript'],
-    extensions: ['.js', '.ts'],
-  }),
-  terser(),
-];
+    typescript({
+      ...(options.format === 'esm' && {
+        tsconfig: resolveFile(`./tsconfig.json`),
+        declarationDir: resolveFile(`dist/${pkg}/es`),
+        include: [
+          resolveFile(`../packages/${pkg}/src/**/*.ts`),
+          resolveFile(`../packages/${pkg}/src/**/*.d.ts`),
+        ],
+      }),
+      ...(options.format === 'cjs' && { declaration: false }),
+    }),
+    babel({
+      babelHelpers: 'bundled',
+      presets: ['@babel/preset-typescript', options.babel && '@babel/preset-env'].filter(Boolean),
+      extensions: ['.js', '.ts'],
+    }),
+    options.minify && terser(),
+  ].filter(Boolean);
 
 const createConfig = (pkg) => {
   const input = resolveFile(`../packages/${pkg}/src/index.ts`);
   const external = ['vue'];
-
   return [
     // ESM 配置
     {
       input,
       output: {
         file: resolveFile(`dist/${pkg}/es/index.mjs`),
-        format: 'es',
+        format: 'esm',
         exports: 'named',
       },
       external,
-      plugins: createPlugins(pkg, true),
+      plugins: createPlugins(pkg, { format: 'esm', babel: false, minify: false }),
     },
     // CommonJS 配置
     {
@@ -56,7 +64,7 @@ const createConfig = (pkg) => {
         exports: 'named',
       },
       external,
-      plugins: createPlugins(pkg, false),
+      plugins: createPlugins(pkg, { format: 'cjs', babel: false, minify: false }),
     },
   ];
 };
