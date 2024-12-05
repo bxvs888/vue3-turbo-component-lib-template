@@ -39,4 +39,6 @@ const handleClick = (event: MouseEvent) => {
 };
 </script>
 
-<style src="./Button.scss"></style>
+<style lang="scss">
+@use './Button.scss' as *;
+</style>

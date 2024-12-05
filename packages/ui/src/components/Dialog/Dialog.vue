@@ -26,4 +26,6 @@ const close = () => {
 };
 </script>
 
-<style src="./Dialog.scss"></style>
+<style lang="scss">
+@use './Dialog.scss' as *;
+</style>

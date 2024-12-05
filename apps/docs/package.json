@@ -13,15 +13,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mylib/directives": "workspace:*",
     "@mylib/hooks": "workspace:*",
     "@mylib/ui": "workspace:*",
     "@mylib/utils": "workspace:*",
-    "@mylib/directives": "workspace:*",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue-jsx": "^4.1.1",
-    "sass": "^1.81.0",
+    "sass": "^1.82.0",
     "typescript": "^5.7.2",
     "vitepress": "^1.5.0",
     "vitepress-demo-plugin": "^1.1.3"

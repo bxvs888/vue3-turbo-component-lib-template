@@ -1,10 +1,14 @@
-const typescript = require('@rollup/plugin-typescript');
-const babel = require('@rollup/plugin-babel');
-const { terser } = require('rollup-plugin-terser');
-const { nodeResolve } = require('@rollup/plugin-node-resolve');
-const path = require('path');
+// 导入必要的插件
+const typescript = require('@rollup/plugin-typescript'); // TypeScript 编译插件
+const babel = require('@rollup/plugin-babel'); // Babel 转换插件
+const { terser } = require('rollup-plugin-terser'); // 代码压缩插件
+const { nodeResolve } = require('@rollup/plugin-node-resolve'); // 解析 node_modules 中的模块
+const path = require('path'); // Node.js 路径模块
 
+// 定义需要打包的包列表
 const packages = ['hooks', 'directives', 'utils'];
+
+// 解析文件路径的辅助函数
 const resolveFile = (...args) => path.resolve(__dirname, ...args);
 
 /**

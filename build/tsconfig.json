@@ -13,7 +13,8 @@
     "lib": ["ESNext", "DOM"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["../packages/*/src"]
+      "@/*": ["../packages/*/src"],
+      "~/_utils": ["../packages/ui/src/_utils"]
     }
   },
   "include": [

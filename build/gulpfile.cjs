@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const clean = require('gulp-clean');
 const rollup = require('rollup');
+const bundleUI = require('./rollup.ui.config.cjs');
 
 // 清理 dist 目录
 gulp.task('clean', function () {
@@ -38,7 +39,8 @@ gulp.task('utils', async function () {
 
 // 打包 UI 组件
 gulp.task('ui', async function () {
-  // await bundle('ui');
+  // 因为ui库比较复杂，单独抽离打包
+  await bundleUI();
 });
 
 // 默认任务，运行所有任务
