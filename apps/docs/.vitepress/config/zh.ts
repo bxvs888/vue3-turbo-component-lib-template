@@ -17,6 +17,10 @@ export const zh = defineConfig({
             text: '更新日志',
             link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template/blob/master/CHANGELOG.md',
           },
+          // {
+          //   text: '参与贡献',
+          //   link: '',
+          // },
         ],
       },
     ],

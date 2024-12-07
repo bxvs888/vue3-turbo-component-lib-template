@@ -10,6 +10,19 @@ export const en = defineConfig({
       { text: 'Home', link: '/' },
       // { text: 'Others', link: '/markdown-examples' },
       { text: 'Blog', link: 'https://huangmingfu.github.io/my-blog' },
+      {
+        text: 'More',
+        items: [
+          {
+            text: 'Changelog',
+            link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template/blob/master/CHANGELOG.md',
+          },
+          // {
+          //   text: 'Contribute',
+          //   link: '',
+          // },
+        ],
+      },
     ],
     sidebar: [
       {

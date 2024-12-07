@@ -1,11 +1,11 @@
 ## 1.0.0 (2024-12-07)
 
-### Features
+### Features 新增
 
-- **@mylib/ui:** [UI 组件库](./packages/ui/CHANGELOG.md)
-- **@mylib/utils:** [工具库](./packages/utils/CHANGELOG.md)
-- **@mylib/hooks:** [Hooks 库](./packages/hooks/CHANGELOG.md)
-- **@mylib/directives:** [自定义指令库](./packages/directives/CHANGELOG.md)
+- **@mylib/ui:** [UI 组件库 ui component library](./packages/ui/CHANGELOG.md)
+- **@mylib/utils:** [工具库 utility library](./packages/utils/CHANGELOG.md)
+- **@mylib/hooks:** [Hooks 库 hooks library](./packages/hooks/CHANGELOG.md)
+- **@mylib/directives:** [自定义指令库 directives library](./packages/directives/CHANGELOG.md)
 <!-- ### Other Changes -->
 - **@mylib/typescript-config:** TypeScript 配置
 - **@mylib/prettier-config:** Prettier 配置
