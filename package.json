@@ -33,7 +33,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean",
-    "version-packages": "changeset version",
+    "changeset:version": "pnpm changeset && pnpm changeset version",
     "deps:update": "pnpm update -r --latest",
     "deps:check": "pnpm outdated -r",
     "preinstall": "npx only-allow pnpm",

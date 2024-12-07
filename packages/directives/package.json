@@ -1,6 +1,6 @@
 {
   "name": "@mylib/directives",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "@mylib directives library",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

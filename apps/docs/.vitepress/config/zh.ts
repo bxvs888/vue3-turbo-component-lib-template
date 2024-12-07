@@ -10,6 +10,15 @@ export const zh = defineConfig({
       { text: '首页', link: '/' },
       // { text: '其他', link: '/markdown-examples' },
       { text: '博客', link: 'https://huangmingfu.github.io/my-blog' },
+      {
+        text: '更多',
+        items: [
+          {
+            text: '更新日志',
+            link: 'https://github.com/huangmingfu/vue3-turbo-component-lib-template/blob/master/CHANGELOG.md',
+          },
+        ],
+      },
     ],
     sidebar: [
       {
