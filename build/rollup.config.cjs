@@ -3,6 +3,7 @@ const typescript = require('@rollup/plugin-typescript'); // TypeScript 编译插
 const babel = require('@rollup/plugin-babel'); // Babel 转换插件
 const { terser } = require('rollup-plugin-terser'); // 代码压缩插件
 const { nodeResolve } = require('@rollup/plugin-node-resolve'); // 解析 node_modules 中的模块
+const json = require('@rollup/plugin-json'); // 处理 JSON 文件
 const path = require('path'); // Node.js 路径模块
 
 // 定义需要打包的包列表
@@ -21,6 +22,9 @@ const resolveFile = (...args) => path.resolve(__dirname, ...args);
  */
 const createPlugins = (pkg, options = {}) =>
   [
+    json({
+      preferConst: true,
+    }),
     nodeResolve({
       extensions: ['.ts', '.js'],
       moduleDirectories: ['node_modules', 'src'],

@@ -7,12 +7,12 @@ const scss = require('rollup-plugin-scss'); // 编译 SCSS 文件
 const dts = require('rollup-plugin-dts').default; // 生成 TypeScript 声明文件
 const path = require('path'); // Node.js 路径模块
 const alias = require('@rollup/plugin-alias'); // 创建导入别名
-const sass = require('sass'); // SCSS 编译器
 const fs = require('fs'); // 文件系统
+const json = require('@rollup/plugin-json'); // 处理 JSON 文件
 
 // 解析文件路径的辅助函数
 const resolveFile = (...args) => path.resolve(__dirname, ...args);
-const UI_ROOT = resolveFile('../packages/ui');
+// const UI_ROOT = resolveFile('../packages/ui');
 
 // 确保目录存在
 const ensureDir = (dir) => {
@@ -30,41 +30,22 @@ const getPlugins = (format) => {
     alias({
       entries: [{ find: '~/_utils', replacement: resolveFile('../packages/ui/src/_utils') }],
     }),
+    json({
+      preferConst: true,
+    }),
     vuePlugin({
       include: [/\.vue$/],
-      target: 'browser',
-      style: {
-        preprocessOptions: {
-          scss: {
-            charset: false,
-          },
-        },
-      },
+      target: 'esnext',
     }),
     nodeResolve({
       extensions: ['.ts', '.tsx', '.vue', '.js', '.scss'],
       moduleDirectories: ['node_modules', 'src'],
     }),
     esbuild({
-      include: /\.[jt]sx?$/,
-      exclude: /node_modules/,
-      sourceMap: false,
-      target: 'es2018',
-      jsx: 'preserve',
       tsconfig: resolveFile('./tsconfig.json'),
+      jsx: 'preserve',
     }),
-    scss({
-      output: path.join(outputDir, 'style.css'),
-      outputStyle: 'compressed',
-      processor: () => sass,
-      includePaths: [
-        path.join(UI_ROOT, 'src'),
-        path.join(UI_ROOT, 'src/components'),
-        'node_modules',
-      ],
-      watch: UI_ROOT,
-      prefix: `@use "sass:math";`,
-    }),
+    scss({ fileName: 'style.css' }),
   ];
 };
 
@@ -81,6 +62,9 @@ const dtsConfig = {
       entries: [{ find: '~/_utils', replacement: resolveFile('../packages/ui/src/_utils') }],
     }),
     dts(),
+    json({
+      preferConst: true,
+    }),
   ],
 };
 
