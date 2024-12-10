@@ -39,7 +39,8 @@ Additionally, the project includes automated scripts and continuous integration 
 "dev:play": "pnpm -F @mylib/playground run dev", // Start the playground
 "build": "turbo run build", // Build all packages
 "build:docs": "pnpm -F @mylib/docs run build", // Build the documentation application
-"lint": "turbo run lint", // Check all packages' code
+"build:gulp": "gulp -f build/gulpfile.cjs", // Unified packaging script managed by gulp
+"lint": "turbo run lint", // Check all packages' code (add lint checks to the required subpackages yourself)
 "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"", // Format all packages' code
 "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean", // Clean all packages
 "deps:update": "pnpm update -r --latest", // Update all packages' dependencies

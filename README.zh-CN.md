@@ -37,7 +37,8 @@
 "dev:play": "pnpm -F @mylib/playground run dev", // 启动演练场
 "build": "turbo run build", // 构建所有包
 "build:docs": "pnpm -F @mylib/docs run build", // 构建文档应用
-"lint": "turbo run lint", // 检查所有包的代码
+"build:gulp": "gulp -f build/gulpfile.cjs",// 使用gulp管理的统一打包脚本
+"lint": "turbo run lint", // 检查所有包的代码（自行给需要的子包添加lint检查）
 "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"", // 格式化所有包的代码
 "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean", // 清理所有包
 "deps:update": "pnpm update -r --latest", // 更新所有包的依赖
@@ -51,7 +52,7 @@
 
 ```bash
 # @mylib可以通过rename-pkg命令，一键更改为属于自己的包名，如@vue3-lib
-pnpm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 ```
 
 ### apps/docs 文档
