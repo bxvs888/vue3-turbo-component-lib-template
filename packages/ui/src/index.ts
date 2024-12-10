@@ -1,6 +1,8 @@
 import type { App } from 'vue';
 import { VButton, VDialog } from './components';
 
+export { version } from '../package.json';
+
 const components = [VButton, VDialog];
 
 function install(app: App) {
