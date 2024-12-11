@@ -1,7 +1,7 @@
 import type { App } from 'vue';
 import { VButton, VDialog } from './components';
 
-export { version } from '../package.json';
+export { version } from './version';
 
 const components = [VButton, VDialog];
 
