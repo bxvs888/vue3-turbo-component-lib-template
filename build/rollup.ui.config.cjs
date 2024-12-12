@@ -1,6 +1,7 @@
 // 导入必要的 Rollup 插件和工具
 const { rollup } = require('rollup');
 const vuePlugin = require('@vitejs/plugin-vue'); // Vue 单文件组件编译插件
+const vueJSXPlugin = require('@vitejs/plugin-vue-jsx'); // Vue jsx组件编译插件
 const esbuild = require('rollup-plugin-esbuild').default; // 快速的 JavaScript/TypeScript 转译器
 const { nodeResolve } = require('@rollup/plugin-node-resolve'); // 解析 node_modules 中的模块
 const scss = require('rollup-plugin-scss'); // 编译 SCSS 文件
@@ -23,7 +24,7 @@ const ensureDir = (dir) => {
 
 // 通用插件配置
 const getPlugins = (format) => {
-  const outputDir = resolveFile(`dist/ui/${format === 'esm' ? 'es' : 'lib'}`);
+  const outputDir = resolveFile(`dist/ui/${format === 'esm' ? 'esm' : 'cjs'}`);
   ensureDir(outputDir);
 
   return [
@@ -37,6 +38,7 @@ const getPlugins = (format) => {
       include: [/\.vue$/],
       target: 'esnext',
     }),
+    vueJSXPlugin(),
     nodeResolve({
       extensions: ['.ts', '.tsx', '.vue', '.js', '.scss'],
       moduleDirectories: ['node_modules', 'src'],
@@ -53,7 +55,7 @@ const getPlugins = (format) => {
 const dtsConfig = {
   input: resolveFile('../packages/ui/src/index.ts'),
   output: {
-    file: resolveFile('dist/ui/es/index.d.ts'),
+    file: resolveFile('dist/ui/esm/index.d.ts'),
     format: 'es',
   },
   external: [/\.scss$/, 'vue'],
@@ -72,7 +74,7 @@ const dtsConfig = {
 const buildConfig = (format) => ({
   input: resolveFile('../packages/ui/src/index.ts'),
   output: {
-    file: resolveFile(`dist/ui/${format === 'esm' ? 'es/index.mjs' : 'lib/index.js'}`),
+    file: resolveFile(`dist/ui/${format === 'esm' ? 'esm/index.mjs' : 'cjs/index.js'}`),
     format,
     exports: 'named',
   },

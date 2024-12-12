@@ -19,7 +19,7 @@ export default defineConfig({
     vueJsx(),
     dts({
       // 包含的文件类型
-      include: ['src/**/*.ts', 'src/**/*.vue'],
+      include: ['src/**/*.{vue,ts,tsx}'],
       // 输出目录
       outDir: ['dist/es', 'dist/lib'],
       // 写入文件前的处理

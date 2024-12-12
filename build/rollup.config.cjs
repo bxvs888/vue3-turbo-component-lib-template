@@ -32,7 +32,7 @@ const createPlugins = (pkg, options = {}) =>
     typescript({
       ...(options.format === 'esm' && {
         tsconfig: resolveFile(`./tsconfig.json`),
-        declarationDir: resolveFile(`dist/${pkg}/es`),
+        declarationDir: resolveFile(`dist/${pkg}/esm`),
         include: [
           resolveFile(`../packages/${pkg}/src/**/*.ts`),
           resolveFile(`../packages/${pkg}/src/**/*.d.ts`),
@@ -56,7 +56,7 @@ const createConfig = (pkg) => {
     {
       input,
       output: {
-        file: resolveFile(`dist/${pkg}/es/index.mjs`),
+        file: resolveFile(`dist/${pkg}/esm/index.mjs`),
         format: 'esm',
         exports: 'named',
       },
@@ -67,7 +67,7 @@ const createConfig = (pkg) => {
     {
       input,
       output: {
-        file: resolveFile(`dist/${pkg}/lib/index.js`),
+        file: resolveFile(`dist/${pkg}/cjs/index.js`),
         format: 'cjs',
         exports: 'named',
       },
