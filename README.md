@@ -1,8 +1,8 @@
 **English** | [简体中文](./README.zh-CN.md)
 
-# A Monorepo Component Library Template Project Based on Turbo, Vue3.5+, and TypeScript5+, Helping to Quickly Build Your Own Component Library🚀
+# A Monorepo Component Library Template Project Based on Turbo, Vue3.5+, and TypeScript5+, Helping to Quickly Build Your Own/Enterprise-Level Component Library🚀
 
-This is a modern component library template based on `Turborepo + Vue 3.5 + TypeScript`, using Monorepo architecture to manage multiple packages, covering ESLint, Prettier, Stylelint, Commitlint + Husky + Lint-Staged, and TypeScript project specification configuration. This template provides a complete development environment, aiming to allow developers to focus on component development without worrying about the complexity of underlying configuration, helping to quickly build their own component library.
+This is a modern component library template based on `Turborepo + Vue 3.5 + TypeScript`, using Monorepo architecture to manage multiple packages, covering ESLint, Prettier, Stylelint, Commitlint + Husky + Lint-Staged, and TypeScript project specification configuration. This template provides a complete development environment, aiming to allow developers to focus on component development without worrying about the complexity of underlying configuration, helping to quickly build your own/enterprise-level component library (with detailed step-by-step comments included~).
 
 ## ✨ Features
 
@@ -10,12 +10,15 @@ This is a modern component library template based on `Turborepo + Vue 3.5 + Type
 - 🚫 Force using pnpm to manage dependencies, solve the problem of ghost dependencies, save disk space, and speed up installation
 - 🚀 Using Turbo + Vue 3.5 + TypeScript, enjoy the latest technology features
 - 🎨 Integrated complete code specification configuration to ensure code quality
-- 📚 Using VitePress to build documentation, supporting enhanced Markdown syntax
+- 📚 Documentation built with VitePress, supporting internationalization
 - 🔥 Component library supports on-demand import to reduce bundle size
 - 🎯 Complete type hints to improve development experience
 - 🛠️ Rich utility functions and Hooks to improve development efficiency
 - 🔄 Support hot updates to enhance development experience
+- 🔧 Equipped with a one-click package renaming script to replace @mylib with your own package name
 - ⚡️ Based on Vite/Rollup to build ESM and CJS products
+- ❤️ Equipped with two packaging modes: unified packaging with gulp + rollup or individual package builds with rollup/vite, developers can choose based on their preference
+- 📝 Version and release management for multiple packages using changeset
 
 ## 📦 Project Structure
 
@@ -28,6 +31,7 @@ The project uses Monorepo architecture and mainly contains the following parts:
 - `packages/ui`: Contains all UI component packages.
 - `apps/docs`: Documentation application, built with Vitepress, providing detailed component library documentation and usage guides.
 - `playground`: Playground for testing and demonstrating component examples, built with Vite.
+- `build`: Unified packaging script managed by gulp, independent from individual package builds.
 
 Additionally, the project includes automated scripts and continuous integration configurations to support efficient development processes and quality assurance.
 

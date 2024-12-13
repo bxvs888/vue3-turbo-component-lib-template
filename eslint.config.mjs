@@ -1,4 +1,1 @@
-export default {
-  root: true,
-  extends: ['@mylib/eslint-config'],
-};
+export { default } from '@mylib/eslint-config';

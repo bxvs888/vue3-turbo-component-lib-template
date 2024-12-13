@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build:gulp": "gulp -f ./gulpfile.cjs",
+    "build:gulp": "gulp -f gulpfile.js",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {

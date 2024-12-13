@@ -1,7 +1,8 @@
 const gulp = require('gulp');
 const clean = require('gulp-clean');
 const rollup = require('rollup');
-const bundleUI = require('./rollup.ui.config.cjs');
+const bundleUI = require('./rollup.ui.config.js');
+const bundleConfig = require('./rollup.config.js');
 
 // 清理 dist 目录
 gulp.task('clean', function () {
@@ -10,8 +11,7 @@ gulp.task('clean', function () {
 
 // 使用 Rollup 打包
 async function bundle(pkg) {
-  const config = require('./rollup.config.cjs');
-  const pkgConfigs = config.filter((c) => c.input.includes(`\\${pkg}\\`));
+  const pkgConfigs = bundleConfig.filter((c) => c.input.includes(`\\${pkg}\\`));
 
   if (!pkgConfigs.length) return;
 

@@ -11,6 +11,7 @@ out/
 .turbo
 .temp
 .stylelintcache
+.eslintcache
 
 yarn.lock
 package-lock.json
