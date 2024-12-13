@@ -183,7 +183,7 @@ importers:
         version: 2.8.1
 
   packages/lint-configs/commitlint-config:
-    dependencies:
+    devDependencies:
       '@commitlint/cli':
         specifier: ^19.6.0
         version: 19.6.0(@types/node@22.10.1)(typescript@5.7.2)
@@ -210,7 +210,7 @@ importers:
         version: 9.4.3(eslint@9.16.0(jiti@1.21.6))
 
   packages/lint-configs/prettier-config:
-    dependencies:
+    devDependencies:
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
