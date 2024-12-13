@@ -17,26 +17,24 @@
     "./*": "./dist/*"
   },
   "files": [
-    "dist"
+    "dist",
+    "package.json",
+    "README.md"
   ],
   "scripts": {
     "build": "rm -rf dist && vite build",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@mylib/typescript-config": "workspace:*",
     "@types/node": "^22.10.1",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitejs/plugin-vue-jsx": "^4.1.1",
-    "@vue/runtime-core": "^3.5.13",
     "sass": "^1.82.0",
     "typescript": "^5.7.2",
     "vite": "^6.0.2",
-    "vite-plugin-dts": "^4.3.0",
-    "vue": "^3.5.13"
+    "vite-plugin-dts": "^4.3.0"
   },
   "peerDependencies": {
     "vue": "^3.5.13"
-  },
-  "style": "dist/styles/index.css"
+  }
 }

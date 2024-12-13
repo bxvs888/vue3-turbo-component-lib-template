@@ -14,10 +14,8 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@mylib/typescript-config": "workspace:*",
     "rollup-plugin-esbuild": "6.1.1",
     "@rollup/plugin-json": "^6.1.0",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup": "^4.28.0"
+    "rollup-plugin-dts": "^6.1.1"
   }
 }

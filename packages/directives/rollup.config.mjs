@@ -15,11 +15,9 @@ export default {
     },
     // 打包出压缩后的文件
     // {
-    //   dir: 'dist',
-    //   entryFileNames: 'index.min.mjs',
-    //   file: `dist/index${minify ? '.min' : ''}.js`, // dir+entryFileNames
+    //   file: `dist/index.min.js`,
     //   format: 'esm',
-    //   plugins: [minify && terser()],
+    //   plugins: [terser()],
     // },
   ],
   plugins: [
@@ -29,4 +27,5 @@ export default {
     }),
     terser(), // 压缩输出（体积减小了，但是不方便查看打包后的代码来排查问题）
   ],
+  external: ['vue'],
 };
