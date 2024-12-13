@@ -1,7 +1,7 @@
 // 导入必要的插件
 const typescript = require('@rollup/plugin-typescript'); // TypeScript 编译插件
 const babel = require('@rollup/plugin-babel'); // Babel 转换插件
-const { terser } = require('rollup-plugin-terser'); // 代码压缩插件
+const terser = require('@rollup/plugin-terser'); // 代码压缩插件
 const { nodeResolve } = require('@rollup/plugin-node-resolve'); // 解析 node_modules 中的模块
 const json = require('@rollup/plugin-json'); // 处理 JSON 文件
 const path = require('path'); // Node.js 路径模块

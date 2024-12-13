@@ -2,7 +2,7 @@
 const { rollup } = require('rollup');
 const vuePlugin = require('@vitejs/plugin-vue'); // Vue 单文件组件编译插件
 const vueJSXPlugin = require('@vitejs/plugin-vue-jsx'); // Vue jsx组件编译插件
-const esbuild = require('rollup-plugin-esbuild').default; // 快速的 JavaScript/TypeScript 转译器
+const esbuild = require('rollup-plugin-esbuild').default; // esbuild 快速的 JavaScript/TypeScript 转译器
 const { nodeResolve } = require('@rollup/plugin-node-resolve'); // 解析 node_modules 中的模块
 const scss = require('rollup-plugin-scss'); // 编译 SCSS 文件
 const dts = require('rollup-plugin-dts').default; // 生成 TypeScript 声明文件
