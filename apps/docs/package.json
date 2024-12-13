@@ -7,11 +7,11 @@
     "dev": "vitepress dev",
     "build": "rm -rf .vitepress/dist && vitepress build",
     "preview": "vitepress preview",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .vitepress/dist && rm -rf .vitepress/cache"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf .vitepress/dist && rm -rf .vitepress/cache && rm -rf .vitepress/.temp"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@mylib/directives": "workspace:*",
     "@mylib/hooks": "workspace:*",
@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue-jsx": "^4.1.1",
-    "sass": "^1.82.0",
+    "sass": "^1.83.0",
     "typescript": "^5.7.2",
     "vitepress": "^1.5.0",
     "vitepress-demo-plugin": "^1.1.3"
