@@ -10,16 +10,14 @@
     "esbenp.prettier-vscode",
     // 支持 dotenv 文件语法
     "mikestead.dotenv",
-    // 源代码的拼写检查器
-    "streetsidesoftware.code-spell-checker",
     // iconify 图标插件
     "antfu.iconify",
     // CSS 变量提示
     "vunguyentuan.vscode-css-variables",
-    // 在 package.json 中显示 PNPM catalog 的版本
-    "antfu.pnpm-catalog-lens",
     // Markdown 格式化支持
-    "yzhang.markdown-all-in-one"
+    "yzhang.markdown-all-in-one",
+    // 统一编辑器代码风格
+    "editorconfig.editorconfig"
   ],
   "unwantedRecommendations": [
     // 和 volar 冲突
