@@ -17,9 +17,7 @@
     "./*": "./dist/*"
   },
   "files": [
-    "dist",
-    "package.json",
-    "README.md"
+    "dist"
   ],
   "scripts": {
     "build": "rm -rf dist && vite build",
