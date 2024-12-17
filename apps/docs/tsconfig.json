@@ -12,13 +12,7 @@
 
     /* Linting */
     "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "~/*": ["../packages/ui/src/*"]
-    }
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
-  // "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["**/*.ts", "**/*.d.ts", "**/*.tsx", "**/*.vue"]
 }

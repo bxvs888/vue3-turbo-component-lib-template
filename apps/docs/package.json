@@ -13,6 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@mylib/typescript-config": "workspace:*",
     "@mylib/directives": "workspace:*",
     "@mylib/hooks": "workspace:*",
     "@mylib/ui": "workspace:*",
