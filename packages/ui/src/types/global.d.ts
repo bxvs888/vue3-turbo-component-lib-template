@@ -3,7 +3,8 @@
 
 /**
  * 给全局引入的UI组件类型提示：
- * tsconfig.json需要添加以下配置：
+ * tsconfig.json 需要添加配置："@mylib/ui/global.d.ts"
+ * 如：
  * "types": ["vite/client", "@mylib/ui/global.d.ts"]
  */
 declare module '@vue/runtime-core' {

@@ -7,8 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(import.meta.dirname, './src'),
-      // 本地UI库，ui组件修改实时变化
-      'mylib/ui': resolve(import.meta.dirname, '../packages/ui/src'),
+      // 使用本地UI库，ui组件修改实时变化，提高调试效率。
+      '~@mylib/ui': resolve(import.meta.dirname, '../packages/ui/src'),
       '~': resolve(import.meta.dirname, '../packages/ui/src'),
     },
   },
