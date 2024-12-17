@@ -29,7 +29,7 @@ export default defineConfig({
         content,
       }),
     }),
-    // 自定义插件
+    // 自定义复制插件（可以使用 vite-plugin-static-copy 插件代替）
     {
       name: 'copy-global-dts',
       closeBundle() {
