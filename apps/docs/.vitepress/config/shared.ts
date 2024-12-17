@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress';
-import vueJsx from '@vitejs/plugin-vue-jsx';
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin';
 import path from 'node:path';
 
@@ -27,10 +26,5 @@ export const shared = defineConfig({
         demoDir: path.resolve(__dirname, '../../examples'),
       });
     },
-  },
-  // Vite配置
-  vite: {
-    // 添加vue-jsx插件支持
-    plugins: [vueJsx()],
   },
 });
