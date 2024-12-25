@@ -39,6 +39,7 @@
     "deps:update": "pnpm update -r --latest",
     "deps:check": "pnpm outdated -r",
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "turbo run build",
     "prepare": "husky install",
     "rename-pkg": "bash ./scripts/rename-package.sh"
   },

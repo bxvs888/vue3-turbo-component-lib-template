@@ -49,6 +49,7 @@ Additionally, the project includes automated scripts and continuous integration 
 "deps:update": "pnpm update -r --latest", // Update all packages' dependencies
 "deps:check": "pnpm outdated -r", // Check all packages' dependencies
 "preinstall": "npx only-allow pnpm", // Ensure pnpm is used to install dependencies
+"postinstall": "turbo run build", // Run build after installing dependencies to ensure all packages are built and the project runs successfully
 "prepare": "husky install", // Install Husky hooks
 "rename-pkg": "bash ./scripts/rename-package.sh" // Rename packages in one go, e.g., @mylib -> @vue3-lib
 ```
@@ -83,6 +84,14 @@ pnpm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 - [Vitepress](https://vitepress.dev/)
 - [Vite](https://vitejs.dev/)
 - [Vben-admin](https://github.com/vbenjs/vue-vben-admin)
+
+## Help Guide
+
+1. If you encounter issues executing `rm -rf` or other `shell` commands, you can run the commands using Git Bash terminal (which comes with Git after installation).
+   ![Run Commands in Git Bash](https://huangmingfu.github.io/drawing-bed/images/pic-go/202412251542234.png)
+   For commands like `clean`, `rename-pkg`, etc., located in the project root directory, you can use the above method to resolve the issue.
+
+2. If you encounter failures when running `pnpm run dev`, you need to first execute the build command: `pnpm run build`, and then run `pnpm run dev`.
 
 ## Contributing Guide
 
