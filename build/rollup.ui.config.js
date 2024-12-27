@@ -88,7 +88,7 @@ async function bundleUI() {
         dts(),
       ],
     },
-    // 生成样式
+    // 生成样式和压缩版代码文件
     {
       input,
       external,
