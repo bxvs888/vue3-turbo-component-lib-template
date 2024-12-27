@@ -1,9 +1,9 @@
 import vFocus from './v-focus';
 
+export { version } from './version';
+
 export { vFocus };
 
-const directives = {
+export default {
   vFocus,
 };
-
-export default directives;

@@ -1,9 +1,9 @@
-// 导入必要的插件
-const typescript = require('@rollup/plugin-typescript'); // TypeScript 编译插件
 const babel = require('@rollup/plugin-babel'); // Babel 转换插件
 const terser = require('@rollup/plugin-terser'); // 代码压缩插件
 const { nodeResolve } = require('@rollup/plugin-node-resolve'); // 解析 node_modules 中的模块
 const json = require('@rollup/plugin-json'); // 处理 JSON 文件
+const esbuild = require('rollup-plugin-esbuild').default; // esbuild 快速的 JavaScript/TypeScript 转译器
+const dts = require('rollup-plugin-dts').default; // 生成 TypeScript 声明文件
 const path = require('path'); // Node.js 路径模块
 
 // 定义需要打包的包列表
@@ -18,34 +18,24 @@ const resolveFile = (...args) => path.resolve(__dirname, ...args);
  * @param {*} options.babel // 是否将现代 JavaScript 代码转换为向后兼容的版本
  * @param {*} options.minify // 是否压缩
  * @param {*} options.format // 输出格式
+ * @param {*} options.dts // 是否生成类型文件
  * @returns {Array} Plugins
  */
-const createPlugins = (pkg, options = {}) =>
+const createPlugins = (_pkg, options = {}) =>
   [
     json({
-      preferConst: true,
+      preferConst: options.babel ? false : true,
     }),
-    nodeResolve({
-      extensions: ['.ts', '.js'],
-      moduleDirectories: ['node_modules', 'src'],
-    }),
-    typescript({
-      ...(options.format === 'esm' && {
-        tsconfig: resolveFile(`./tsconfig.json`),
-        declarationDir: resolveFile(`dist/${pkg}/esm`),
-        include: [
-          resolveFile(`../packages/${pkg}/src/**/*.ts`),
-          resolveFile(`../packages/${pkg}/src/**/*.d.ts`),
-        ],
+    nodeResolve(),
+    esbuild(),
+    options.babel &&
+      babel({
+        babelHelpers: 'bundled',
+        presets: ['@babel/preset-env'],
+        extensions: ['.js', '.ts'],
       }),
-      ...(options.format === 'cjs' && { declaration: false }),
-    }),
-    babel({
-      babelHelpers: 'bundled',
-      presets: ['@babel/preset-typescript', options.babel && '@babel/preset-env'].filter(Boolean),
-      extensions: ['.js', '.ts'],
-    }),
     options.minify && terser(),
+    options.dts && dts(),
   ].filter(Boolean);
 
 const createConfig = (pkg) => {
@@ -55,24 +45,34 @@ const createConfig = (pkg) => {
     // ESM 配置
     {
       input,
+      external,
       output: {
         file: resolveFile(`dist/${pkg}/esm/index.mjs`),
         format: 'esm',
         exports: 'named',
       },
-      external,
-      plugins: createPlugins(pkg, { format: 'esm', babel: false, minify: false }),
+      plugins: createPlugins(pkg, { format: 'esm' }),
     },
     // CommonJS 配置
     {
       input,
+      external,
       output: {
         file: resolveFile(`dist/${pkg}/cjs/index.js`),
         format: 'cjs',
         exports: 'named',
       },
+      plugins: createPlugins(pkg, { format: 'cjs' }),
+    },
+    // 声明文件配置
+    {
+      input,
       external,
-      plugins: createPlugins(pkg, { format: 'cjs', babel: false, minify: false }),
+      output: {
+        file: resolveFile(`dist/${pkg}/types/index.d.ts`),
+        format: 'esm',
+      },
+      plugins: createPlugins(pkg, { format: 'esm', dts: true }),
     },
   ];
 };

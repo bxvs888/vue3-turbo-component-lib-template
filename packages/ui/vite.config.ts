@@ -21,7 +21,7 @@ export default defineConfig({
       // 包含的文件类型
       include: ['src/**/*.{vue,ts,tsx}'],
       // 输出目录
-      outDir: ['dist/es', 'dist/lib'],
+      outDir: ['dist/types'],
       // 写入文件前的处理
       beforeWriteFile: (filePath, content) => ({
         // 替换文件路径中的 '/src/' 为 '/'，不然类型产物都会被放在src文件夹下面
@@ -53,7 +53,7 @@ export default defineConfig({
       formats: ['es', 'cjs'],
       // 输出文件名
       fileName: (format) =>
-        `${format === 'es' ? 'es' : 'lib'}/index.${format === 'es' ? 'mjs' : 'js'}`,
+        `${format === 'es' ? 'esm' : 'cjs'}/index.${format === 'es' ? 'mjs' : 'js'}`,
       // CSS 输出文件名
       cssFileName: `style`,
     },

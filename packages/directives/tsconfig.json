@@ -1,9 +1,3 @@
 {
-  "extends": "@mylib/typescript-config/build.json",
-  // 以下都是不能继承的配置，需要单独配置
-  "include": ["src/**/*.ts", "src/**/*.d.ts"],
-  "compilerOptions": {
-    "outDir": "./dist",
-    "declarationDir": "./dist"
-  }
+  "extends": "@mylib/typescript-config/base.json"
 }

@@ -1,4 +1,3 @@
-// 导入必要的 Rollup 插件和工具
 const { rollup } = require('rollup');
 const vuePlugin = require('@vitejs/plugin-vue'); // Vue 单文件组件编译插件
 const vueJSXPlugin = require('@vitejs/plugin-vue-jsx'); // Vue jsx组件编译插件
@@ -6,27 +5,20 @@ const esbuild = require('rollup-plugin-esbuild').default; // esbuild 快速的 J
 const { nodeResolve } = require('@rollup/plugin-node-resolve'); // 解析 node_modules 中的模块
 const scss = require('rollup-plugin-scss'); // 编译 SCSS 文件
 const dts = require('rollup-plugin-dts').default; // 生成 TypeScript 声明文件
-const path = require('path'); // Node.js 路径模块
 const alias = require('@rollup/plugin-alias'); // 创建导入别名
-const fs = require('fs'); // 文件系统
 const json = require('@rollup/plugin-json'); // 处理 JSON 文件
+const path = require('path'); // Node.js 路径模块
 
 // 解析文件路径的辅助函数
 const resolveFile = (...args) => path.resolve(__dirname, ...args);
-// const UI_ROOT = resolveFile('../packages/ui');
 
-// 确保目录存在
-const ensureDir = (dir) => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-};
-
-// 通用插件配置
-const getPlugins = (format) => {
-  const outputDir = resolveFile(`dist/ui/${format === 'esm' ? 'esm' : 'cjs'}`);
-  ensureDir(outputDir);
-
+/**
+ * 通用插件配置
+ * @param {*} options.minify // 是否压缩
+ * @param {*} options.style // 样式
+ * @returns {Array} Plugins
+ */
+const getPlugins = (options = {}) => {
   return [
     alias({
       entries: [{ find: '~/_utils', replacement: resolveFile('../packages/ui/src/_utils') }],
@@ -34,10 +26,7 @@ const getPlugins = (format) => {
     json({
       preferConst: true,
     }),
-    vuePlugin({
-      include: [/\.vue$/],
-      target: 'esnext',
-    }),
+    vuePlugin(),
     vueJSXPlugin(),
     nodeResolve({
       extensions: ['.ts', '.tsx', '.vue', '.js', '.scss'],
@@ -45,54 +34,60 @@ const getPlugins = (format) => {
     }),
     esbuild({
       tsconfig: resolveFile('./tsconfig.json'),
+      minify: options.minify,
       jsx: 'preserve',
     }),
-    scss({ fileName: 'style.css' }),
-  ];
+    !options.style && scss({ output: false }),
+  ].filter(Boolean);
 };
-
-// 类型声明配置
-const dtsConfig = {
-  input: resolveFile('../packages/ui/src/index.ts'),
-  output: {
-    file: resolveFile('dist/ui/esm/index.d.ts'),
-    format: 'es',
-  },
-  external: [/\.scss$/, 'vue'],
-  plugins: [
-    alias({
-      entries: [{ find: '~/_utils', replacement: resolveFile('../packages/ui/src/_utils') }],
-    }),
-    dts(),
-    json({
-      preferConst: true,
-    }),
-  ],
-};
-
-// 构建配置
-const buildConfig = (format) => ({
-  input: resolveFile('../packages/ui/src/index.ts'),
-  output: {
-    file: resolveFile(`dist/ui/${format === 'esm' ? 'esm/index.mjs' : 'cjs/index.js'}`),
-    format,
-    exports: 'named',
-  },
-  external: ['vue'],
-  plugins: getPlugins(format),
-});
 
 async function bundleUI() {
-  // 清理之前的构建文件
-  const distDir = resolveFile('dist/ui');
-  if (fs.existsSync(distDir)) {
-    fs.rmSync(distDir, { recursive: true });
-  }
-
+  const input = resolveFile('../packages/ui/src/index.ts');
+  const external = ['vue'];
   const configs = [
-    buildConfig('esm'), // ESM 配置
-    buildConfig('cjs'), // CommonJS 配置
-    dtsConfig, // 类型声明配置
+    // 生成 ESM
+    {
+      input,
+      external,
+      output: {
+        file: resolveFile('dist/ui/esm/index.mjs'),
+        format: 'esm',
+        exports: 'named',
+      },
+      plugins: getPlugins(),
+    },
+    // 生成 CommonJS
+    {
+      input,
+      external,
+      output: {
+        file: resolveFile('dist/ui/cjs/index.js'),
+        format: 'cjs',
+        exports: 'named',
+      },
+      plugins: getPlugins(),
+    },
+    // 生成类型
+    {
+      input,
+      external,
+      output: {
+        file: resolveFile('dist/ui/types/index.d.ts'),
+        format: 'esm',
+      },
+      plugins: [dts()],
+    },
+    // 生成样式
+    {
+      input,
+      external,
+      output: {
+        // dir: resolveFile('dist/ui'),
+        file: resolveFile('dist/ui/index.min.js'),
+        format: 'esm',
+      },
+      plugins: [...getPlugins({ style: true, minify: true }), scss({ fileName: 'style.css' })],
+    },
   ];
 
   for (const config of configs) {
