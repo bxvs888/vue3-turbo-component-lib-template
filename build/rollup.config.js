@@ -13,15 +13,14 @@ const packages = ['hooks', 'directives', 'utils'];
 const resolveFile = (...args) => path.resolve(__dirname, ...args);
 
 /**
- *
+ * 通用插件配置
  * @param {*} pkg // 包名
  * @param {*} options.babel // 是否将现代 JavaScript 代码转换为向后兼容的版本
  * @param {*} options.minify // 是否压缩
- * @param {*} options.format // 输出格式
  * @param {*} options.dts // 是否生成类型文件
  * @returns {Array} Plugins
  */
-const createPlugins = (_pkg, options = {}) =>
+const getPlugins = (_pkg, options = {}) =>
   [
     json({
       preferConst: options.babel ? false : true,
@@ -51,7 +50,7 @@ const createConfig = (pkg) => {
         format: 'esm',
         exports: 'named',
       },
-      plugins: createPlugins(pkg, { format: 'esm' }),
+      plugins: getPlugins(pkg),
     },
     // CommonJS 配置
     {
@@ -62,7 +61,7 @@ const createConfig = (pkg) => {
         format: 'cjs',
         exports: 'named',
       },
-      plugins: createPlugins(pkg, { format: 'cjs' }),
+      plugins: getPlugins(pkg),
     },
     // 声明文件配置
     {
@@ -72,7 +71,7 @@ const createConfig = (pkg) => {
         file: resolveFile(`dist/${pkg}/types/index.d.ts`),
         format: 'esm',
       },
-      plugins: createPlugins(pkg, { format: 'esm', dts: true }),
+      plugins: getPlugins(pkg, { dts: true }),
     },
   ];
 };

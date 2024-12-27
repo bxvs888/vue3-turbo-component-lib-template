@@ -23,22 +23,22 @@ async function bundle(pkg) {
 }
 
 // 打包 hooks
-gulp.task('hooks', async function () {
+gulp.task('hooks', async () => {
   await bundle('hooks');
 });
 
 // 打包 directives
-gulp.task('directives', async function () {
+gulp.task('directives', async () => {
   await bundle('directives');
 });
 
 // 打包 utils
-gulp.task('utils', async function () {
+gulp.task('utils', async () => {
   await bundle('utils');
 });
 
 // 打包 UI 组件
-gulp.task('ui', async function () {
+gulp.task('ui', async () => {
   // 因为ui库比较复杂，单独抽离打包
   await bundleUI();
 });
