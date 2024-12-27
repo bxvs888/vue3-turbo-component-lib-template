@@ -7,6 +7,7 @@ const scss = require('rollup-plugin-scss'); // 编译 SCSS 文件
 const dts = require('rollup-plugin-dts').default; // 生成 TypeScript 声明文件
 const alias = require('@rollup/plugin-alias'); // 创建导入别名
 const json = require('@rollup/plugin-json'); // 处理 JSON 文件
+const copy = require('rollup-plugin-copy'); // 复制文件
 const path = require('path'); // Node.js 路径模块
 
 // 解析文件路径的辅助函数
@@ -75,14 +76,23 @@ async function bundleUI() {
         file: resolveFile('dist/ui/types/index.d.ts'),
         format: 'esm',
       },
-      plugins: [dts()],
+      plugins: [
+        copy({
+          targets: [
+            {
+              src: '../packages/ui/src/types/global.d.ts',
+              dest: 'dist/ui',
+            },
+          ],
+        }),
+        dts(),
+      ],
     },
     // 生成样式
     {
       input,
       external,
       output: {
-        // dir: resolveFile('dist/ui'),
         file: resolveFile('dist/ui/index.min.js'),
         format: 'esm',
       },
