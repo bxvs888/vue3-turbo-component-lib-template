@@ -65,7 +65,7 @@ pnpm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 
 > Equipped with international language switching
 
-![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271628842.png)
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202412291431548.png)
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271629728.png)
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271629672.png)
 

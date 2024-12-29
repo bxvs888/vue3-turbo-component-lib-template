@@ -2,9 +2,10 @@ import { defineConfig } from 'vitepress';
 
 export const en = defineConfig({
   lang: 'en-US',
-  title: 'Component Library Template Documentation',
+  title: 'Library Template Doc',
   description: 'A Vue3-based Component Library and Utility Collection',
   themeConfig: {
+    logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },

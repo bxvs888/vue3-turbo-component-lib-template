@@ -63,7 +63,7 @@ pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 
 > 配备了国际化语言切换
 
-![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271628842.png)
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202412291431548.png)
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271629728.png)
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271629672.png)
 

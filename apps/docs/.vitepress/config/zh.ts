@@ -5,6 +5,7 @@ export const zh = defineConfig({
   title: '组件库模板文档',
   description: '一个基于 Vue3 的组件库和工具集',
   themeConfig: {
+    logo: '/logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
