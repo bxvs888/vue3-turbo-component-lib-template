@@ -3,7 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "main": "index.mjs",
+  "main": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "default": "./index.mjs"
+    }
+  },
   "scripts": {
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
