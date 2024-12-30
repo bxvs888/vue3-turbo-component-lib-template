@@ -28,6 +28,7 @@
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { routes } from '@/router';
+import type { MenuProps } from 'ant-design-vue';
 
 const collapsed = ref<boolean>(false);
 const selectedKeys = ref<string[]>(['/ui']);
@@ -37,8 +38,8 @@ const pageTitle = computed(() => {
   return routes.filter((item) => item.path == selectedKeys.value[0]).pop()?.meta?.title + '演示';
 });
 
-const onMenuSelect = ({ key }: { key: string }) => {
-  router.push(key);
+const onMenuSelect: MenuProps['onSelect'] = ({ key }) => {
+  router.push(key.toString());
 };
 </script>
 

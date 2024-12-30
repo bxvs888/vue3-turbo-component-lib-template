@@ -1,4 +1,6 @@
 /// <reference types="vite/client" />
+/// <reference types="ant-design-vue/typings/global.d.ts" />
+/// <reference types="@mylib/ui/global.d.ts" />
 
 declare module '*.vue' {
   import type { DefineComponent } from 'vue';

@@ -2,7 +2,7 @@
   "extends": "@mylib/typescript-config/vite.json",
   "compilerOptions": {
     "skipLibCheck": true,
-    "types": ["vite/client", "@mylib/ui/global.d.ts"],
+    // "types": ["vite/client", "@mylib/ui/global.d.ts"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
