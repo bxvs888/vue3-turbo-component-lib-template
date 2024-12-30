@@ -21,6 +21,11 @@
       "cache": false,
       // 持久运行的任务
       "persistent": true
+    },
+    // 发包
+    "publish": {
+      // 任务开始运行前需要完成的任务列表
+      "dependsOn": ["build"] // 发包前先打包
     }
   }
 }
