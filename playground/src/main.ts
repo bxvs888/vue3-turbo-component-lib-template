@@ -6,8 +6,8 @@ import router from './router';
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/reset.css';
 // 引入@mylib/ui
-import '@mylib/ui/style.css';
 import MyLibUI from '@mylib/ui';
+import '@mylib/ui/style.css';
 
 const app = createApp(App);
 app.use(Antd); // 全局引入antdv组件
