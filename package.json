@@ -22,10 +22,6 @@
     "vite6",
     "turbo"
   ],
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
   "scripts": {
     "dev": "turbo run dev",
     "dev:docs": "pnpm -F @mylib/docs run dev",

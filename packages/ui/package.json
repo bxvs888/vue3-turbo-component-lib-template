@@ -18,6 +18,10 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build": "rm -rf dist && vite build",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
