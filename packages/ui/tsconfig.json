@@ -2,6 +2,8 @@
   // 继承 Vite 配置
   "extends": "@mylib/typescript-config/vite.json",
   "compilerOptions": {
+    // 移除 .d.ts.map 文件映射
+    "declarationMap": false,
     // JSX 保留模式
     "jsx": "preserve",
     // 包含的库文件
