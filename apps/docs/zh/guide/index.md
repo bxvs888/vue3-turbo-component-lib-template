@@ -44,7 +44,7 @@ import UI from '@mylib/ui';
 import '@mylib/ui/style.css';
 const app = createApp(App);
 app.use(UI);
-//  tsconfig.json还需要添加以下配置以获得类型提示：
+//  tsconfig.json 还需要添加以下配置以获得类型提示：
 //  "types": ["@mylib/ui/global.d.ts"]
 
 // 按需引入

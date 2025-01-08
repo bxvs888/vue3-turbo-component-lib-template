@@ -13,59 +13,63 @@ Vue 3 组件库，基于 Vue 3 + TypeScript 构建的现代化组件库。
 ## 安装
 
 ```bash
-npm
 npm install @mylib/ui
 
-yarn
 yarn add @mylib/ui
 
-pnpm
 pnpm add @mylib/ui
 ```
 
 ## 快速开始
 
+### 全局引入
+
 ```ts
 // main.ts
 import { createApp } from 'vue';
+import App from './App.vue';
+
 import VUI from '@mylib/ui';
 import '@mylib/ui/style.css';
-import App from './App.vue';
+
 const app = createApp(App);
 app.use(VUI);
 app.mount('#app');
 ```
 
-## 按需引入
+### 按需引入
 
 ```ts
 // main.ts
 import { createApp } from 'vue';
+import App from './App.vue';
+
 import { Button } from '@mylib/ui';
 import '@mylib/ui/style.css';
-import App from './App.vue';
+
 const app = createApp(App);
 app.use(Button);
 app.mount('#app');
 ```
 
-## 组件列表
+## 使用示例
 
-### 基础组件
+```vue
+<template>
+  <VButton @click="open = true">弹窗</VButton>
+  <VButton type="primary">按钮</VButton>
+  <VButton type="success">按钮</VButton>
+  <VButton type="warning">按钮</VButton>
+  <VButton type="danger">按钮</VButton>
+  <VButton type="info">按钮</VButton>
+  <VDialog v-model:open="open">
+    <div> 弹窗测试2222 </div>
+  </VDialog>
+</template>
 
-- Button 按钮
-
-### 反馈组件
-
-- Dialog 对话框
-
-## 目录结构
-
-packages/ui/
-├── src/ # 组件源码
-│ ├── components/ # 组件
-│ ├── \_utils/ # 组件内部使用的相关工具函数
-│ └── index.ts # 入口文件
-├── dist/ # 构建输出目录
-├── types/ # 类型声明文件
-└── package.json # 包配置文件
+<script setup lang="ts">
+import { VButton, VDialog } from '@mylib/ui';
+import { ref } from 'vue';
+const open = ref(false);
+</script>
+```

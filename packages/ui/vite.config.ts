@@ -52,10 +52,11 @@ export default defineConfig({
       // 输出格式
       formats: ['es', 'cjs'],
       // 输出文件名
-      fileName: (format) =>
-        `${format === 'es' ? 'esm' : 'cjs'}/index.${format === 'es' ? 'mjs' : 'js'}`,
+      fileName: (format) => {
+        return `${format === 'es' ? 'esm' : 'cjs'}/[name].${format === 'es' ? 'mjs' : 'js'}`;
+      },
       // CSS 输出文件名
-      cssFileName: `style`,
+      cssFileName: 'style',
     },
     rollupOptions: {
       // 外部依赖
@@ -64,6 +65,10 @@ export default defineConfig({
       output: {
         // 导出方式
         exports: 'named',
+        // 保留原始模块结构，而不是将所有模块合并成一个大文件
+        preserveModules: true,
+        // 将 src 目录设置为模块的根目录，这样输出的文件就会直接从 src 的子目录开始，去掉 src 这一层。
+        preserveModulesRoot: 'src',
       },
     },
   },
