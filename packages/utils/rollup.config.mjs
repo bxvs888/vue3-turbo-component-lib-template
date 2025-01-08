@@ -7,7 +7,6 @@ import dts from 'rollup-plugin-dts';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
-/** @type {import('rollup').RollupOptions} */
 export default defineConfig([
   {
     // 输入文件

@@ -52,11 +52,14 @@
 "rename-pkg": "bash ./scripts/rename-package.sh" // 一键重命名包，如：@mylib -> @vue3-lib
 ```
 
-## 🚀 快速开始（演示）
+## 🚀 快速开始
 
 ```bash
-# @mylib可以通过rename-pkg命令，一键更改为属于自己的包名，如@vue3-lib
+# 以下请替换为自己的包名，@mylib 可以通过 rename-pkg 命令，一键更改为属于自己的包名，如 pnpm rename-pkg "@mylib" "@vue3-lib"
 pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+
+# 演示安装：
+pnpm add @hmflib/ui @hmflib/utils @hmflib/hooks @hmflib/directives
 ```
 
 ### apps/docs 文档

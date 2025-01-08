@@ -57,8 +57,11 @@ Additionally, the project includes automated scripts and continuous integration 
 ## 🚀 Quick Start（Demo）
 
 ```bash
-# @mylib can be changed to your own package name in one command using rename-pkg, e.g., @vue3-lib
-pnpm install @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+# Please replace the following package names with your own. You can use the rename-pkg command to change @mylib to your own package name, for example: pnpm rename-pkg "@mylib" "@vue3-lib"
+pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
+
+# Example installation:
+pnpm add @hmflib/ui @hmflib/utils @hmflib/hooks @hmflib/directives
 ```
 
 ### document

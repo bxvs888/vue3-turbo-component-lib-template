@@ -4,7 +4,6 @@ import json from '@rollup/plugin-json';
 import dts from 'rollup-plugin-dts';
 // import terser from '@rollup/plugin-terser';
 
-/** @type {import('rollup').RollupOptions} */
 export default defineConfig([
   {
     // 输入文件

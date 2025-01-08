@@ -3,7 +3,6 @@ import esbuild from 'rollup-plugin-esbuild';
 import json from '@rollup/plugin-json';
 import dts from 'rollup-plugin-dts';
 
-/** @type {import('rollup').RollupOptions} */
 export default defineConfig([
   {
     // 输入文件
