@@ -1,14 +1,14 @@
 <template>
-  <dialog class="v-dialog" v-if="open">
-    <div class="v-dialog__overlay" @click="close"></div>
+  <dialog v-if="open" class="v-dialog">
+    <div class="v-dialog__overlay" @click="close" />
     <div class="v-dialog__content">
-      <slot></slot>
+      <slot />
     </div>
   </dialog>
 </template>
 
 <script setup lang="ts">
-import { DialogProps, DialogEmits } from './Dialog.types';
+import type { DialogEmits, DialogProps } from './Dialog.types';
 
 defineOptions({
   name: 'VDialog',

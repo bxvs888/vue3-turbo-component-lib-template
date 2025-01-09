@@ -1,101 +1,50 @@
-// 引入vue模版的eslint
-// vue文件解析器
-import vueParser from 'vue-eslint-parser';
-
 import eslint from '@eslint/js';
-import prettier from 'eslint-plugin-prettier';
-import pluginVue from 'eslint-plugin-vue';
-// ts-eslint解析器，使 eslint 可以解析 ts 语法
 import tseslint from 'typescript-eslint';
+import pluginVue from 'eslint-plugin-vue';
 
-export default tseslint.config({
-  ignores: ['node_modules', 'dist', 'dist*'],
-  files: ['**/**/*.ts', '**/**/*.tsx', '**/**/*.vue'],
-  // tseslint.config添加了extends扁平函数，直接用。否则是eslint9.0版本是没有extends的
-  extends: [
-    eslint.configs.recommended,
-    ...tseslint.configs.recommended,
-    ...pluginVue.configs['flat/essential'],
-  ],
-  plugins: {
-    prettier,
-  },
-  languageOptions: {
-    parser: vueParser, // 使用vue解析器，这个可以识别vue文件
-    parserOptions: {
-      parser: tseslint.parser, // 在vue文件上使用ts解析器
-      sourceType: 'module',
-      ecmaVersion: 2020,
-      ecmaFeatures: {
-        jsx: true,
+export default tseslint.config(
+  { ignores: ['**/node_modules', '**/dist', '**/*.js'] }, // 忽略 node_modules 和 dist 目录
+  eslint.configs.recommended, // 使用 ESLint 的推荐配置
+  tseslint.configs.base, // 使用 TypeScript ESLint 的基础配置
+  ...pluginVue.configs['flat/recommended'], // 使用 Vue ESLint 的推荐配置
+  {
+    files: ['**/*.vue'], // 针对所有 .vue 文件
+    languageOptions: {
+      parserOptions: {
+        parser: '@typescript-eslint/parser', // 使用 TypeScript ESLint 解析器
       },
     },
   },
-  rules: {
-    // Prettier 错误提示
-    'prettier/prettier': 'error',
-    // 允许使用转义字符
-    'no-useless-escape': 0,
-    // 允许未定义的变量（通常用于全局变量）
-    'no-undef': 0,
-    // 允许在 setup 中解构 props
-    'vue/no-setup-props-destructure': 0,
-    // setup 中的变量检查
-    'vue/script-setup-uses-vars': 1,
-    // 允许使用保留的组件名
-    'vue/no-reserved-component-names': 0,
-    // TypeScript 相关规则
-    '@typescript-eslint/ban-ts-ignore': 0,
-    '@typescript-eslint/explicit-function-return-type': 0,
-    '@typescript-eslint/no-explicit-any': 0,
-    '@typescript-eslint/no-var-requires': 0,
-    '@typescript-eslint/no-empty-function': 0,
-    // Vue 自定义事件名称规则
-    'vue/custom-event-name-casing': 0,
-    // 允许在定义前使用变量
-    'no-use-before-define': 0,
-    '@typescript-eslint/no-use-before-define': 0,
-    // TypeScript 注释相关规则
-    '@typescript-eslint/ban-ts-comment': 0,
-    '@typescript-eslint/ban-types': 0,
-    '@typescript-eslint/no-non-null-assertion': 0,
-    '@typescript-eslint/explicit-module-boundary-types': 0,
-    // 未使用变量的规则
-    '@typescript-eslint/no-unused-vars': 0,
-    'no-unused-vars': 0,
-    // 函数括号前的空格规则
-    'space-before-function-paren': 0,
-
-    // Vue 模板相关规则
-    'vue/attributes-order': 0,
-    'vue/one-component-per-file': 0,
-    'vue/html-closing-bracket-newline': 0,
-    'vue/max-attributes-per-line': 0,
-    'vue/multiline-html-element-content-newline': 0,
-    'vue/singleline-html-element-content-newline': 0,
-    'vue/attribute-hyphenation': 0,
-    'vue/require-default-prop': 0,
-    'vue/require-explicit-emits': 0,
-    // HTML 标签自闭合规则
-    'vue/html-self-closing': [
-      1,
-      {
-        html: {
-          void: 'always', // 空元素总是自闭合
-          normal: 'never', // 普通元素不自闭合
-          component: 'always', // 组件总是自闭合
+  {
+    rules: {
+      'no-debugger': 'error', // 禁止使用 debugger 语句
+      // 'no-console': ['error', { allow: ['warn', 'error', 'info', 'clear'] }], // 禁止使用 console 语句，但允许 warn, error, info 和 clear
+      'prefer-const': 'error', // 强制使用 const 而不是 let
+      'sort-imports': ['error', { ignoreDeclarationSort: true }], // 强制排序导入语句，但忽略声明排序
+      'no-duplicate-imports': 'error', // 禁止重复导入
+      // 该规则强制使用 '@ts-expect-error' 注释在 TypeScript 代码中指示故意的类型错误，提高代码的清晰度和可维护性。
+      '@typescript-eslint/prefer-ts-expect-error': 'error', // 强制使用 @ts-expect-error 而不是 @ts-ignore
+      // 强制使用 'import type' 进行类型导入
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          fixStyle: 'inline-type-imports', // 使用内联类型导入样式
+          disallowTypeAnnotations: false, // 允许类型注解
         },
-        svg: 'always',
-        math: 'always',
-      },
-    ],
-    // 允许单个单词的组件名
-    'vue/multi-word-component-names': 0,
-    // 允许使用 v-html
-    'vue/no-v-html': 0,
-    // transition 组件内的 toggle 规则
-    'vue/require-toggle-inside-transition': 0,
-    // 允许使用空对象类型 {}
-    '@typescript-eslint/no-empty-object-type': 0,
+      ],
+      // 强制在导入仅包含内联类型限定符的规范时使用顶级导入类型限定符
+      '@typescript-eslint/no-import-type-side-effects': 'error', // 禁止导入类型时产生副作用
+      'vue/max-attributes-per-line': 'off', // 关闭每行最多属性数的限制
+      'vue/singleline-html-element-content-newline': 'off', // 关闭单行 HTML 元素内容换行的限制
+      'vue/multi-word-component-names': 'off', // 关闭多单词组件名称的限制
+      'vue/html-self-closing': [
+        'error',
+        {
+          html: { component: 'always', normal: 'always', void: 'any' }, // 强制 HTML 组件和普通元素始终自闭合，void 元素可以自闭合或不自闭合
+          math: 'always', // 强制 math 元素始终自闭合
+          svg: 'always', // 强制 svg 元素始终自闭合
+        },
+      ],
+    },
   },
-});
+);

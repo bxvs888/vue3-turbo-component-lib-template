@@ -1,6 +1,6 @@
 <template>
   <div :class="`${name}-demo`">
-    <a-tabs v-model:activeKey="activeKey" type="card">
+    <a-tabs v-model:active-key="activeKey" type="card">
       <a-tab-pane v-for="item in renderCmp" :key="item.index" :tab="item.name" />
     </a-tabs>
     <component :is="renderCmp[activeKey]?.component" />

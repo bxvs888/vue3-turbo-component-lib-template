@@ -1,8 +1,13 @@
 <template>
   <a-layout style="min-height: 100vh">
     <a-layout-sider v-model:collapsed="collapsed" collapsible>
-      <div class="logo"></div>
-      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" mode="inline" @select="onMenuSelect">
+      <div class="logo" />
+      <a-menu
+        v-model:selected-keys="selectedKeys"
+        theme="dark"
+        mode="inline"
+        @select="onMenuSelect"
+      >
         <a-menu-item v-for="route in routes" :key="route.path">
           <template #icon>
             <component :is="route.meta?.icon" />
@@ -25,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { computed, ref } from 'vue';
 import { useRouter } from 'vue-router';
 import { routes } from '@/router';
 import type { MenuProps } from 'ant-design-vue';

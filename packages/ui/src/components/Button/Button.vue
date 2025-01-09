@@ -12,12 +12,12 @@
     :disabled="disabled"
     @click="handleClick"
   >
-    <slot></slot>
+    <slot />
   </button>
 </template>
 
 <script setup lang="ts">
-import { ButtonProps, ButtonEmits } from './Button.types';
+import type { ButtonEmits, ButtonProps } from './Button.types';
 
 defineOptions({
   name: 'VButton',
