@@ -1,5 +1,5 @@
 export interface DialogProps {
-  // visible: boolean;
+  open: boolean;
 }
 
 export interface DialogEmits {

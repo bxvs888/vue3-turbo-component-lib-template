@@ -39,7 +39,7 @@ const handleClick = (event: MouseEvent) => {
 };
 </script>
 
-<!-- <style src="./Button.scss"></style> 这种写法gulp+rollup打包会报错，vite打包不会，采用以下都兼容的写法：-->
+<!-- <style src="./Button.scss"></style> 这种写法 gulp + rollup 打包会报错，vite 打包不会，所以采用以下都兼容的写法：-->
 <style lang="scss">
 @use './Button.scss' as *;
 </style>
