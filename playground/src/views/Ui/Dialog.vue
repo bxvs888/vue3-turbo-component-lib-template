@@ -1,7 +1,7 @@
 <template>
   <a-space>
     <VDialog v-model:open="open">
-      <div> 弹窗测试2222 </div>
+      <div>弹窗测试2222</div>
     </VDialog>
     <a-button @click="open = true"> 弹窗 </a-button>
   </a-space>

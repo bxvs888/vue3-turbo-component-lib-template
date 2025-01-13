@@ -63,7 +63,7 @@ app.mount('#app');
   <VButton type="danger">按钮</VButton>
   <VButton type="info">按钮</VButton>
   <VDialog v-model:open="open">
-    <div> 弹窗测试2222 </div>
+    <div>弹窗测试2222</div>
   </VDialog>
 </template>
 

@@ -1,8 +1,8 @@
 <template>
   <VDialog v-model:open="open">
-    <div> 弹窗测试2222 </div>
+    <div>弹窗测试2222</div>
   </VDialog>
-  <button @click="open = true"> 弹窗 </button>
+  <button @click="open = true">弹窗</button>
 </template>
 
 <script setup lang="ts">
