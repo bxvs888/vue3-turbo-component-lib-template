@@ -6,15 +6,19 @@ Basic dialog component.
 
 <demo vue="ui/dialog/basic.vue" />
 
+## API
+
+### Props
+
 | Property | Description                           | Type    | Default |
 | -------- | ------------------------------------- | ------- | ------- |
 | open     | Controls the visibility of the dialog | boolean | false   |
 
 ## Events
 
-| Event Name | Description                         |
-| ---------- | ----------------------------------- |
-| close      | Triggered when the dialog is closed |
+| Event Name | Description                         | Arguments |
+| ---------- | ----------------------------------- | --------- |
+| close      | Triggered when the dialog is closed | -         |
 
 ## Styles
 

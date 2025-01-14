@@ -6,6 +6,10 @@ Basic button component.
 
 <demo vue="ui/button/basic.vue" />
 
+## API
+
+### Props
+
 | Property | Description                    | Type                                                      | Default  |
 | -------- | ------------------------------ | --------------------------------------------------------- | -------- |
 | type     | Button type                    | 'primary' \| 'success' \| 'warning' \| 'danger' \| 'info' | ''       |
