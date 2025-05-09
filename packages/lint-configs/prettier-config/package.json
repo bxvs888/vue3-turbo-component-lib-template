@@ -15,9 +15,9 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "devDependencies": {
-    "prettier": "^3.5.1"
+    "prettier": "catalog:"
   },
   "peerDependencies": {
-    "prettier": "^3.4.2"
+    "prettier": "catalog:"
   }
 }

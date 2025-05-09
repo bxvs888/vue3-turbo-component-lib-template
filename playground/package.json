@@ -9,21 +9,21 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@ant-design/icons-vue": "^7.0.1",
+    "@ant-design/icons-vue": "catalog:",
     "@mylib/directives": "workspace:*",
     "@mylib/hooks": "workspace:*",
     "@mylib/typescript-config": "workspace:*",
     "@mylib/ui": "workspace:*",
     "@mylib/utils": "workspace:*",
-    "ant-design-vue": "^4.2.6",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "ant-design-vue": "catalog:",
+    "vue": "catalog:",
+    "vue-router": "catalog:"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.2.1",
-    "sass": "^1.85.0",
-    "typescript": "^5.7.3",
-    "vite": "^6.1.0",
-    "vitest": "^3.0.5"
+    "@vitejs/plugin-vue": "catalog:",
+    "sass": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "catalog:"
   }
 }

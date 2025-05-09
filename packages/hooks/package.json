@@ -19,13 +19,13 @@
   },
   "devDependencies": {
     "@mylib/typescript-config": "workspace:*",
-    "@rollup/plugin-json": "^6.1.0",
-    "rollup": "^4.34.7",
-    "rollup-plugin-dts": "^6.1.1",
-    "rollup-plugin-esbuild": "6.2.0",
-    "vue": "^3.5.13"
+    "@rollup/plugin-json": "catalog:",
+    "rollup": "catalog:",
+    "rollup-plugin-dts": "catalog:",
+    "rollup-plugin-esbuild": "catalog:",
+    "vue": "catalog:"
   },
   "peerDependencies": {
-    "vue": "^3.5.13"
+    "vue": "catalog:"
   }
 }

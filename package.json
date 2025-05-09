@@ -2,7 +2,7 @@
   "name": "vue3-component-lib-template",
   "description": "This is a modern component library template based on Turborepo+Vue 3.5+TypeScript.",
   "version": "1.0.0",
-  "packageManager": "pnpm@9.15.0",
+  "packageManager": "pnpm@9.15.9",
   "author": "huangmingfu <212149997@qq.com>",
   "license": "MIT",
   "homepage": "https://github.com/huangmingfu/vue3-turbo-component-lib-template",
@@ -44,8 +44,8 @@
     "rename-pkg": "bash ./scripts/rename-package.sh"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.12",
-    "@commitlint/cli": "^19.7.1",
+    "@changesets/cli": "catalog:",
+    "@commitlint/cli": "catalog:",
     "@mylib/commitlint-config": "workspace:*",
     "@mylib/directives": "workspace:*",
     "@mylib/eslint-config": "workspace:*",
@@ -55,19 +55,19 @@
     "@mylib/typescript-config": "workspace:*",
     "@mylib/ui": "workspace:*",
     "@mylib/utils": "workspace:*",
-    "eslint": "^9.20.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "prettier": "^3.5.1",
-    "rollup": "^4.34.7",
-    "stylelint": "^16.14.1",
-    "turbo": "^2.4.2",
-    "typescript": "^5.7.3",
-    "vue": "^3.5.13"
+    "eslint": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "prettier": "catalog:",
+    "rollup": "catalog:",
+    "stylelint": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "vue": "catalog:"
   },
   "engines": {
     "node": ">=18",
-    "pnpm": ">=9"
+    "pnpm": ">=9.5"
   },
   "pnpm": {
     "peerDependencyRules": {
