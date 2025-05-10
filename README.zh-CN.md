@@ -43,7 +43,7 @@
 "build:docs": "pnpm -F @mylib/docs run build", // 构建文档应用
 "build:gulp": "gulp -f build/gulpfile.cjs",// 使用gulp管理的统一打包脚本
 "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"", // 格式化所有包的代码
-"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean", // 清理所有包
+"clean": "turbo run clean --continue && rimraf .turbo dist && rm -rf node_modules", // 清理所有包
 "deps:update": "pnpm update -r --latest", // 更新所有包的依赖
 "deps:check": "pnpm outdated -r", // 检查所有包的依赖
 "preinstall": "npx only-allow pnpm", // 确保使用 pnpm 安装依赖

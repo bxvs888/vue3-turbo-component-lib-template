@@ -17,7 +17,7 @@
     "paths": {
       "@/*": ["src/*"],
       "~/*": ["../packages/ui/src/*"],
-      "~@mylib/ui": ["../packages/ui/src/index.ts"]
+      "~/@mylib/ui": ["../packages/ui/src/index.ts"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]

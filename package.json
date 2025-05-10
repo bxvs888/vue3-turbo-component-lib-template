@@ -1,6 +1,6 @@
 {
   "name": "vue3-component-lib-template",
-  "description": "This is a modern component library template based on Turborepo+Vue 3.5+TypeScript.",
+  "description": "This is a modern component library template based on Turborepo + Vue 3.5 + TypeScript.",
   "version": "1.0.0",
   "packageManager": "pnpm@9.15.9",
   "author": "huangmingfu <212149997@qq.com>",
@@ -34,7 +34,7 @@
     "lint:format": "prettier --write \"**/*.{js,jsx,cjs,ts,tsx,mjs,mts,md,vue,scss,css,less,html,json}\"",
     "lint:style": "stylelint \"**/*.{css,scss,less}\" --fix",
     "lint:all": "pnpm run lint:eslint && pnpm run lint:style && pnpm run lint:format",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean",
+    "clean": "turbo run clean --continue && rimraf .turbo dist && rm -rf node_modules",
     "changeset:version": "pnpm changeset && pnpm changeset version",
     "deps:update": "pnpm update -r --latest",
     "deps:check": "pnpm outdated -r",
@@ -63,7 +63,8 @@
     "stylelint": "catalog:",
     "turbo": "catalog:",
     "typescript": "catalog:",
-    "vue": "catalog:"
+    "vue": "catalog:",
+    "rimraf": "catalog:"
   },
   "engines": {
     "node": ">=18",

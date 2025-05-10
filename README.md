@@ -45,7 +45,7 @@ Additionally, the project includes automated scripts and continuous integration 
 "build:docs": "pnpm -F @mylib/docs run build", // Build the documentation application
 "build:gulp": "gulp -f build/gulpfile.cjs", // Unified packaging script managed by gulp
 "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"", // Format all packages' code
-"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && turbo run clean", // Clean all packages
+"clean": "turbo run clean --continue && rimraf .turbo dist && rm -rf node_modules", // Clean all packages
 "deps:update": "pnpm update -r --latest", // Update all packages' dependencies
 "deps:check": "pnpm outdated -r", // Check all packages' dependencies
 "preinstall": "npx only-allow pnpm", // Ensure pnpm is used to install dependencies
