@@ -67,8 +67,8 @@
     "rimraf": "catalog:"
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=9.5"
+    "node": ">=20",
+    "pnpm": ">=9"
   },
   "pnpm": {
     "peerDependencyRules": {
