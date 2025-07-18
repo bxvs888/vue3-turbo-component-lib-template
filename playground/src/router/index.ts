@@ -1,9 +1,9 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { type RouteRecordRaw, createRouter, createWebHistory } from 'vue-router';
 import {
   CommentOutlined,
   ExperimentOutlined,
-  ToolOutlined,
   SettingOutlined,
+  ToolOutlined,
 } from '@ant-design/icons-vue';
 
 export const routes: RouteRecordRaw[] = [

@@ -1,6 +1,9 @@
 import { defineConfig } from 'vitepress';
 import { vitepressDemoPlugin } from 'vitepress-demo-plugin';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url'; // 新增导入
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export const shared = defineConfig({
   // 设置基础路径,用于GitHub Pages部署
