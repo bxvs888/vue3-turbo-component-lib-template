@@ -29,6 +29,9 @@
     "build": "turbo run build",
     "build:docs": "pnpm -F @mylib/docs run build",
     "build:gulp": "gulp -f build/gulpfile.js",
+    "test": "turbo run test",
+    "test:ui": "pnpm -F @mylib/ui run test:ui",
+    "test:coverage": "turbo run test:coverage",
     "publish": "turbo run publish",
     "lint:eslint": "eslint --max-warnings 0 \"**/*.{ts,tsx,js,jsx,cjs,mjs,vue}\" --fix",
     "lint:format": "prettier --write \"**/*.{js,jsx,cjs,ts,tsx,mjs,mts,md,vue,scss,css,less,html,json}\"",
@@ -41,7 +44,8 @@
     "preinstall": "npx only-allow pnpm",
     "postinstall": "turbo run build",
     "prepare": "husky install",
-    "rename-pkg": "bash ./scripts/rename-package.sh"
+    "rename-pkg": "bash ./scripts/rename-package.sh",
+    "generate:component": "node scripts/generate-component.mjs"
   },
   "devDependencies": {
     "@changesets/cli": "catalog:",

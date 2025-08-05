@@ -44,6 +44,9 @@ Additionally, the project includes automated scripts and continuous integration 
 "build": "turbo run build", // Build all packages
 "build:docs": "pnpm -F @mylib/docs run build", // Build the documentation application
 "build:gulp": "gulp -f build/gulpfile.cjs", // Unified packaging script managed by gulp
+"test": "turbo run test", // Run all tests
+"test:ui": "pnpm -F @mylib/ui run test:ui", // Run tests for the UI library
+"test:coverage": "turbo run test:coverage", // Run tests with coverage
 "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"", // Format all packages' code
 "clean": "turbo run clean --continue && rimraf .turbo dist && rm -rf node_modules", // Clean all packages
 "deps:update": "pnpm update -r --latest", // Update all packages' dependencies
@@ -51,7 +54,8 @@ Additionally, the project includes automated scripts and continuous integration 
 "preinstall": "npx only-allow pnpm", // Ensure pnpm is used to install dependencies
 "postinstall": "turbo run build", // Run build after installing dependencies to ensure all packages are built and the project runs successfully
 "prepare": "husky install", // Install Husky hooks
-"rename-pkg": "bash ./scripts/rename-package.sh" // Rename packages in one go, e.g., @mylib -> @vue3-lib
+"rename-pkg": "bash ./scripts/rename-package.sh", // Rename packages in one go, e.g., @mylib -> @vue3-lib
+"generate:component": "node scripts/generate-component.mjs", // Generate new component
 ```
 
 ## 🚀 Quick Start（Demo）

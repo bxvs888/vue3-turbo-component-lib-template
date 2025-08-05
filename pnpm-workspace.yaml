@@ -53,3 +53,6 @@ catalog:
   'ant-design-vue': ^4.2.6
   'vue-router': ^4.5.1
   'rimraf': ^6.0.1
+  '@vitest/ui': ^3.0.5
+  '@vue/test-utils': ^2.4.6
+  'happy-dom': ^15.11.6

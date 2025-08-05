@@ -25,6 +25,10 @@
   },
   "scripts": {
     "build": "rimraf dist && vite build",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "test:bench": "vitest bench",
     "clean": "rimraf .turbo node_modules dist",
     "publish": "pnpm publish"
   },
@@ -33,10 +37,14 @@
     "@types/node": "catalog:",
     "@vitejs/plugin-vue": "catalog:",
     "@vitejs/plugin-vue-jsx": "catalog:",
+    "@vitest/ui": "catalog:",
+    "@vue/test-utils": "catalog:",
+    "happy-dom": "catalog:",
     "sass": "catalog:",
     "typescript": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
+    "vitest": "catalog:",
     "vue": "catalog:"
   },
   "peerDependencies": {

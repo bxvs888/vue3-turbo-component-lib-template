@@ -42,6 +42,9 @@
 "build": "turbo run build", // 构建所有包
 "build:docs": "pnpm -F @mylib/docs run build", // 构建文档应用
 "build:gulp": "gulp -f build/gulpfile.cjs",// 使用gulp管理的统一打包脚本
+"test": "turbo run test:ui", // 测试所有包
+"test:ui": "pnpm -F @mylib/ui run test", // 测试 ui 包
+"test:coverage": "turbo run test:coverage", // 测试所有包的覆盖率
 "format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"", // 格式化所有包的代码
 "clean": "turbo run clean --continue && rimraf .turbo dist && rm -rf node_modules", // 清理所有包
 "deps:update": "pnpm update -r --latest", // 更新所有包的依赖
@@ -49,7 +52,8 @@
 "preinstall": "npx only-allow pnpm", // 确保使用 pnpm 安装依赖
 "postinstall": "turbo run build",// 安装依赖后，构建所有包，确保项目成功运行
 "prepare": "husky install", // 安装 Husky 钩子
-"rename-pkg": "bash ./scripts/rename-package.sh" // 一键重命名包，如：@mylib -> @vue3-lib
+"rename-pkg": "bash ./scripts/rename-package.sh", // 一键重命名包，如：@mylib -> @vue3-lib
+"generate:component": "node scripts/generate-component.mjs", // 生成新组件
 ```
 
 ## 🚀 快速开始
