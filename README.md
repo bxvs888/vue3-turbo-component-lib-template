@@ -1,113 +1,229 @@
 **English** | [简体中文](./README.zh-CN.md)
 
-# A Monorepo Component Library Template Project Based on Turbo, Vue3.5+, and TypeScript5+, Helping to Quickly Build Your Own/Enterprise-Level Component Library🚀
+<h1 align="center">Vue3 Turbo Component Library Template 🚀</h1>
 
-This is a modern component library template based on `Turborepo + Vue 3.5 + TypeScript`, using Monorepo architecture to manage multiple packages, covering ESLint, Prettier, Stylelint, Commitlint + Husky + Lint-Staged, and TypeScript project specification configuration. This template provides a complete development environment, aiming to allow developers to focus on component development without worrying about the complexity of underlying configuration, helping to quickly build your own/enterprise-level component library (with detailed step-by-step comments included~).
+<p align="center">
+  快速构建属于你的企业级 Vue 3 组件库，基于最新技术栈的 Monorepo 模板
+</p>
 
-## ✨ Features
+<p align="center">
+  <a href="https://github.com/huangmingfu/vue3-turbo-component-lib-template/stargazers">
+    <img src="https://img.shields.io/github/stars/huangmingfu/vue3-turbo-component-lib-template" alt="GitHub stars">
+  </a>
+  <a href="https://github.com/huangmingfu/vue3-turbo-component-lib-template/issues">
+    <img src="https://img.shields.io/github/issues/huangmingfu/vue3-turbo-component-lib-template" alt="GitHub issues">
+  </a>
+  <a href="https://github.com/huangmingfu/vue3-turbo-component-lib-template/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/huangmingfu/vue3-turbo-component-lib-template" alt="GitHub">
+  </a>
+  <a href="https://github.com/huangmingfu/vue3-turbo-component-lib-template/network/members">
+    <img src="https://img.shields.io/github/forks/huangmingfu/vue3-turbo-component-lib-template" alt="GitHub forks">
+  </a>
+</p>
 
-- 📦 Based on Monorepo architecture for better code reuse and version management
-- 🚫 Force using pnpm to manage dependencies, solve the problem of ghost dependencies, save disk space, and speed up installation
-- 🚀 Using Turbo + Vue 3.5 + TypeScript, enjoy the latest technology features
-- 🎨 Integrated complete code specification configuration to ensure code quality
-- 📚 Documentation built with VitePress, supporting internationalization
-- 🔥 Component library supports on-demand import to reduce bundle size
-- 🎯 Complete type hints to improve development experience
-- 🛠️ Rich utility functions and Hooks to improve development efficiency
-- 🔄 Support hot updates to enhance development experience
-- 🔧 Equipped with a one-click package renaming script to replace @mylib with your own package name
-- ⚡️ Based on Vite/Rollup to build ESM and CJS products
-- ❤️ Equipped with two packaging modes: unified packaging with gulp + rollup or individual package builds with rollup/vite, developers can choose based on their preference
-- 📝 Version and release management for multiple packages using changeset
+[![Vue.js](https://img.shields.io/badge/Vue.js-3.5-42b883?style=flat-square&logo=vue.js&logoColor=white)](https://v3.vuejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Turborepo](https://img.shields.io/badge/Turborepo-%23000000?style=flat-square&logo=turborepo&logoColor=white)](https://turbo.build/)
+[![pnpm](https://img.shields.io/badge/pnpm-%23F69220?style=flat-square&logo=pnpm&logoColor=white)](https://pnpm.io/)
+[![License](https://img.shields.io/github/license/huangmingfu/vue3-turbo-component-lib-template?style=flat-square)](LICENSE)
 
-## 📦 Project Structure
+A modern component library template based on `Turborepo + Vue 3.5 + TypeScript`, using Monorepo architecture to manage multiple packages with pre-configured code standards and development toolchain. This template helps developers focus on component development without dealing with complicated underlying configurations, quickly building their own enterprise-level component library.
 
-The project uses Monorepo architecture and mainly contains the following parts:
+## ✨ Key Features
 
-- `packages/lint-configs`: Contains all configuration-related packages, such as ESLint, Prettier, Stylelint, Commitlint, and TypeScript configurations. These configuration packages ensure code style consistency and high quality.
-- `packages/hooks`: Contains all custom Hooks packages.
-- `packages/directives`：Contains all directive packages。
-- `packages/utils`: Contains all utility function packages.
-- `packages/ui`: Contains all UI component packages.
-- `apps/docs`: Documentation application, built with Vitepress, providing detailed component library documentation and usage guides.
-- `playground`: Playground for testing and demonstrating component examples, built with Vite.
-- `build`: Unified packaging script managed by gulp, independent from individual package builds.
+- 🚀 **Cutting-edge Tech Stack** - Built on Vue 3.5 + TypeScript 5+, enjoy the latest features
+- 📦 **Monorepo Architecture** - Managed with Turborepo for multiple packages, improving code reusability
+- 🚫 **Enforced pnpm** - Resolves phantom dependencies, saves disk space, improves installation speed
+- 🎨 **Complete Standards** - Integrated ESLint, Prettier, Stylelint, Commitlint and other code standards
+- 📚 **Documentation Support** - Built with VitePress, supports internationalization
+- 🔥 **On-demand Import** - Supports Tree Shaking to reduce final bundle size
+- 🎯 **Full Type Support** - Comprehensive TypeScript type definitions for better DX
+- 🛠️ **Rich Toolset** - Built-in common Hooks, utility functions and directives
+- 🔄 **HMR Support** - Real-time preview during development, boosts productivity
+- 🔧 **One-click Renaming** - Quickly replace @mylib with your custom package name
+- ⚡️ **Multiple Build Modes** - Supports unified build with Gulp or individual package builds
+- 📝 **Version Management** - Uses Changeset for multi-package versioning and release workflow
 
-Additionally, the project includes automated scripts and continuous integration configurations to support efficient development processes and quality assurance.
+## 📁 Project Structure
 
-## pkg.json Commands Guide
-
-```bash
-"dev": "turbo run dev", // Start the development environment for all packages
-"dev:docs": "pnpm -F @mylib/docs run dev", // Start the documentation application
-"dev:play": "pnpm -F @mylib/playground run dev", // Start the playground
-"build": "turbo run build", // Build all packages
-"build:docs": "pnpm -F @mylib/docs run build", // Build the documentation application
-"build:gulp": "gulp -f build/gulpfile.cjs", // Unified packaging script managed by gulp
-"test": "turbo run test", // Run all tests
-"test:ui": "pnpm -F @mylib/ui run test:ui", // Run tests for the UI library
-"test:coverage": "turbo run test:coverage", // Run tests with coverage
-"format": "prettier --write \"**/*.{js,jsx,ts,tsx,mjs,mts,md,vue}\"", // Format all packages' code
-"clean": "turbo run clean --continue && rimraf .turbo dist && rm -rf node_modules", // Clean all packages
-"deps:update": "pnpm update -r --latest", // Update all packages' dependencies
-"deps:check": "pnpm outdated -r", // Check all packages' dependencies
-"preinstall": "npx only-allow pnpm", // Ensure pnpm is used to install dependencies
-"postinstall": "turbo run build", // Run build after installing dependencies to ensure all packages are built and the project runs successfully
-"prepare": "husky install", // Install Husky hooks
-"rename-pkg": "bash ./scripts/rename-package.sh", // Rename packages in one go, e.g., @mylib -> @vue3-lib
-"generate:component": "node scripts/generate-component.mjs", // Generate new component
+```
+├── apps/
+│   └── docs/           # Component library documentation based on VitePress
+├── packages/
+│   ├── ui/             # UI component library
+│   ├── hooks/          # Custom Hooks
+│   ├── directives/     # Custom directives
+│   ├── utils/          # Utility functions
+│   └── lint-configs/   # Code standard configurations
+├── playground/         # Component demo environment
+├── build/              # Unified build scripts
+└── scripts/            # Helper scripts
 ```
 
-## 🚀 Quick Start（Demo）
+## 🚀 Quick Start
 
 ```bash
-# Please replace the following package names with your own. You can use the rename-pkg command to change @mylib to your own package name, for example: pnpm rename-pkg "@mylib" "@vue3-lib"
+# 1. Clone the template
+git clone https://github.com/huangmingfu/vue3-turbo-component-lib-template.git
+
+# 2. Install dependencies
+pnpm install
+
+# 3. Start development environment
+pnpm dev
+
+# 4. Build the project
+pnpm build
+```
+
+### Install the component library in your project
+
+```bash
+# Replace @mylib with your own package name
 pnpm add @mylib/ui @mylib/utils @mylib/hooks @mylib/directives
 
-# Example installation:
+# Example installation
 pnpm add @hmflib/ui @hmflib/utils @hmflib/hooks @hmflib/directives
 ```
 
-### document
+## 🧰 Development Commands
 
-> Equipped with international language switching
+```bash
+# Development
+pnpm dev              # Start development environment for all packages
+pnpm dev:docs         # Start documentation application
+pnpm dev:play         # Start playground
+
+# Building
+pnpm build            # Build all packages
+pnpm build:docs       # Build documentation application
+pnpm build:gulp       # Unified build with gulp
+
+# Testing
+pnpm test             # Test all packages
+pnpm test:ui          # Test UI package
+pnpm test:coverage    # Test coverage for all packages
+
+# Code Quality
+pnpm lint:all         # Check all code standards
+pnpm deps:check       # Check for dependency updates
+pnpm deps:update      # Update all dependencies
+
+# Others
+pnpm clean            # Clean build artifacts
+pnpm rename-pkg       # One-click package renaming
+pnpm generate:component # Generate new component
+```
+
+## 🎯 Why Choose This Template?
+
+### Advantages over other component library templates:
+
+1. **Cutting-edge Technology** - Based on the latest Vue 3.5 and TypeScript 5+, always in sync with technological development
+2. **Ready to Use** - Pre-configured complete development toolchain, start developing without additional setup
+3. **Flexible Architecture** - Monorepo structure for managing multiple packages while maintaining module independence
+4. **Enterprise-grade Standards** - Integrated complete code and commit standards to ensure code quality
+5. **Comprehensive Documentation** - Built-in documentation system with internationalization support
+6. **Multiple Build Options** - Supports both unified and independent builds to meet different team needs
+7. **Easy Customization** - One-click renaming script to quickly customize to your own component library
+
+## 📸 Preview
+
+### Documentation System
+
+> Supports internationalization
 
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202412291431548.png)
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271629728.png)
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271629672.png)
 
-### playground
+### Playground
+
+> Real-time preview and testing of components
 
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271630381.png)
 ![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202411271631563.png)
 
-## Related Links
+## 🔧 Tech Stack
+
+- [Vue 3](https://vuejs.org/) - Progressive JavaScript framework
+- [TypeScript](https://www.typescriptlang.org/) - Superset of JavaScript with type safety
+- [Turborepo](https://turbo.build/repo) - High-performance Monorepo build system
+- [VitePress](https://vitepress.dev/) - Vite-powered static site generator
+- [Vite](https://vitejs.dev/) - Next-generation frontend build tool
+- [pnpm](https://pnpm.io/) - Fast, disk space efficient package manager
+- [ESLint](https://eslint.org/) - JavaScript/TypeScript code quality tool
+- [Prettier](https://prettier.io/) - Code formatter
+- [Stylelint](https://stylelint.io/) - CSS/SCSS/Less code linter
+- [Commitlint](https://commitlint.js.org/) - Commit message linting tool
+- [husky](https://typicode.github.io/husky/) - Git hooks manager
+- [lint-staged](https://github.com/lint-staged/lint-staged) - Run linters on git staged files
+- [Changesets](https://github.com/changesets/changesets) - Versioning and release management tool
+
+## 📚 Related Links
 
 > Some code and structure design references [Vben5](https://github.com/vbenjs/vue-vben-admin)
 
-- [Vue 3](https://vuejs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Turborepo](https://turbo.build/repo)
-- [Vitepress](https://vitepress.dev/)
-- [Vite](https://vitejs.dev/)
-- [Vben-admin](https://github.com/vbenjs/vue-vben-admin)
+- [Vue 3 Official Documentation](https://vuejs.org/)
+- [TypeScript Official Documentation](https://www.typescriptlang.org/)
+- [Turborepo Official Documentation](https://turbo.build/repo)
+- [VitePress Official Documentation](https://vitepress.dev/)
+- [Vben Admin](https://github.com/vbenjs/vue-vben-admin)
 
-## Help Guide
+## ❓ FAQ
 
-1. If you encounter issues executing `rm -rf` or other `shell` commands, you can run the commands using Git Bash terminal (which comes with Git after installation).
-   ![Run Commands in Git Bash](https://huangmingfu.github.io/drawing-bed/images/pic-go/202412251542234.png)
-   For commands like `clean`, `rename-pkg`, etc., located in the project root directory, you can use the above method to resolve the issue.
+### 1. Why recommend pnpm?
 
-2. If you encounter failures when running `pnpm run dev`, you need to first execute the build command: `pnpm run build`, and then run `pnpm run dev`.
+pnpm has the following advantages over npm and yarn:
 
-## Contributing Guide
+- Solves phantom and doppelganger dependencies issues
+- Saves significant disk space
+- Faster installation speed
+- Ensures consistent node_modules structure
 
-1. Fork this repository
+### 2. How to customize package names?
+
+The project uses `@mylib` as the default package name prefix. You can replace it with one command:
+
+```bash
+# Replace @mylib with your custom package name, e.g. @yourname
+pnpm rename-pkg "@mylib" "@yourname"
+```
+
+### 3. How to generate new components?
+
+Use the built-in script to quickly generate new components:
+
+```bash
+pnpm generate:component
+```
+
+### 4. What to do if command execution fails?
+
+If you encounter issues executing `rm -rf` or other shell commands, please use Git Bash terminal to run the commands.  
+![](https://huangmingfu.github.io/drawing-bed/images/pic-go/202412251542234.png)
+
+If `pnpm run dev` fails, first execute the build command:
+
+```bash
+pnpm run build
+pnpm run dev
+```
+
+## 🤝 Contributing
+
+Contributions of any kind are welcome!
+
+1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## License
+## 📄 License
 
 [MIT](LICENSE)
+
+---
+
+⭐ If you like this project, please give it a star! Your support is our motivation for continuous improvement!
