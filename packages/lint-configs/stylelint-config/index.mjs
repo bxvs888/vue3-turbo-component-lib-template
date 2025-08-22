@@ -32,7 +32,7 @@ export default {
     'scss/function-no-unknown': [
       true, // 启用 SCSS 函数未知检查
       {
-        ignoreFunctions: ['mix', 'lighten', 'darken', 'rgba'], // 忽略这些常用 SCSS 函数
+        ignoreFunctions: ['mix', 'lighten', 'darken', 'rgba', 'v-bind'], // 忽略这些常用 SCSS 函数
       },
     ],
     // 关闭 SCSS 全局函数名称检查
