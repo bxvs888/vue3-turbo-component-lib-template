@@ -20,6 +20,7 @@ export default defineConfig({
     dts({
       // 包含的文件类型
       include: ['src/**/*.{vue,ts,tsx}'],
+      exclude: ['src/__tests__/*', 'src/**/*.{test,spec,stories,demo}.{vue,ts,tsx}'],
       // 输出目录
       outDir: ['dist/types'],
       // 写入文件前的处理

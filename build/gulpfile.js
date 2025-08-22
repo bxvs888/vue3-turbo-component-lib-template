@@ -3,6 +3,7 @@ const clean = require('gulp-clean');
 const rollup = require('rollup');
 const bundleUI = require('./rollup.ui.config.js');
 const bundleConfig = require('./rollup.config.js');
+const path = require('path');
 
 // 清理 dist 目录
 gulp.task('clean', function () {
@@ -11,8 +12,12 @@ gulp.task('clean', function () {
 
 // 使用 Rollup 打包
 async function bundle(pkg) {
-  // 错误用法：input.includes(`\\${pkg}\\`) 路径分隔符使用了Windows格式的反斜杠，这在macOS上会导致无法匹配到文件
-  const pkgConfigs = bundleConfig.filter((c) => c.input.includes(`/${pkg}/`));
+  // 使用 path.join 和 path.normalize 确保跨平台兼容性
+  const normalizedPkgPath = path.normalize(`/${pkg}/`);
+  const pkgConfigs = bundleConfig.filter((c) => {
+    const normalizedInput = path.normalize(c.input);
+    return normalizedInput.includes(normalizedPkgPath);
+  });
 
   if (!pkgConfigs.length) return;
 
